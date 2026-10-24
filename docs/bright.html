@@ -105,7 +105,7 @@ header.site{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--
 /* sections */
 .sec{padding-block:clamp(60px,8vw,104px)}
 .sec.soft{background:var(--soft)}
-.head{display:grid;grid-template-columns:1.1fr 1fr;gap:20px 56px;align-items:end;margin-bottom:clamp(28px,4.2vw,50px)}
+.head{display:grid;grid-template-columns:1.1fr 1fr;gap:20px 56px;align-items:start;margin-bottom:clamp(28px,4.2vw,50px)}
 .head>*{min-width:0}
 .head h2{font-size:clamp(30px,4.2vw,52px);font-weight:800;margin-top:12px}
 .head p{color:var(--muted);font-size:17px;max-width:40em}
@@ -117,7 +117,7 @@ figure{margin:0}
 .ph figcaption small{display:block;font:500 12.5px/1.4 var(--body);color:#C6D4E5;margin-top:3px}
 
 /* two-column problem/solution */
-.two{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.two{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
 .two>*{min-width:0}
 .two p+p{margin-top:16px}
 .two .lead{font:600 clamp(20px,2.4vw,28px)/1.2 var(--display);color:var(--heading);letter-spacing:-.02em}
@@ -222,6 +222,12 @@ form .full{grid-column:1 / -1}
 label{display:flex;flex-direction:column;gap:6px;font:600 13px var(--body);color:var(--heading)}
 input,select,textarea{font:400 15px var(--body);color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
 textarea{min-height:120px;resize:vertical}
+fieldset.chk{grid-column:1/-1;border:0;margin:0;padding:0}
+fieldset.chk legend{font:600 13px var(--body);color:var(--heading);padding:0;margin-bottom:9px}
+.cbs{display:flex;flex-wrap:wrap;gap:8px}
+.cb{display:inline-flex;flex-direction:row;align-items:center;gap:7px;font:500 13.5px var(--body);color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:8px 13px;cursor:pointer}
+.cb input{accent-color:var(--green-2);margin:0;width:15px;height:15px;flex:none}
+.cb:has(input:checked){background:color-mix(in srgb,var(--green) 14%,var(--surface));border-color:var(--green);color:var(--heading)}
 .req{color:var(--green-2)}
 .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
 .ferr{grid-column:1 / -1;background:color-mix(in srgb,var(--amber) 18%,var(--surface));border:1px solid var(--amber);color:var(--ink);border-radius:10px;padding:12px 14px;font-weight:500}
@@ -468,10 +474,24 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <label><span>Name <span class="req">*</span></span><input id="f-name" name="name" autocomplete="name" required></label>
       <label><span>Email <span class="req">*</span></span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
       <label>Agency / organization<input id="f-co" name="organisation" autocomplete="organization"></label>
-      <label>Your system of record<select id="f-sys" name="system"><option>311 / CRM</option><option>Cityworks</option><option>Salesforce</option><option>SAP / ERP</option><option>Work-management / CMMS</option><option>Permitting</option><option>Other / not sure</option></select></label>
-      <label>Field or integration platform you use today<select id="f-tools" name="tools"><option value="">— none / not sure —</option><option>Esri Field Maps</option><option>Cityworks</option><option>Rubicon / Routeware</option><option>VertiGIS</option><option>Cartegraph</option><option>Accela</option><option>Salesforce</option><option>FME (Safe Software)</option><option>Custom in-house app</option><option>Other (describe below)</option></select></label>
+      <label>Your system of record<select id="f-sys" name="system"><option value="">— select —</option><option>311 / CRM</option><option>Cityworks</option><option>Salesforce</option><option>SAP / ERP</option><option>Work-management / CMMS</option><option>Permitting</option><option>Other / not sure</option></select></label>
       <label>Role<input id="f-role" name="role" autocomplete="organization-title"></label>
       <label>Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
+      <fieldset class="chk full">
+        <legend>Integration platform you use today <span style="color:var(--muted);font-weight:500">— select any that apply</span></legend>
+        <div class="cbs">
+          <label class="cb"><input type="checkbox" name="tools" value="Cityworks"><span>Cityworks</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="Rubicon / Routeware"><span>Rubicon / Routeware</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="VertiGIS"><span>VertiGIS</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="Cartegraph"><span>Cartegraph</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="Accela"><span>Accela</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="Salesforce"><span>Salesforce</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="FME (Safe Software)"><span>FME (Safe Software)</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="Custom in-house app"><span>Custom in-house app</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="Other"><span>Other (describe below)</span></label>
+          <label class="cb"><input type="checkbox" name="tools" value="None / not sure"><span>None / not sure</span></label>
+        </div>
+      </fieldset>
       <label class="full"><span>Tell us about your workflow <span class="req">*</span></span><textarea id="f-msg" name="message" required placeholder="Share as much or as little as you like — even a sentence helps us tailor the demo. We'll go deeper on the call."></textarea></label>
       <div class="hp" aria-hidden="true"><label>Leave this empty<input id="f-hp" name="_honey" tabindex="-1" autocomplete="off"></label></div>
       <button class="btn green full" type="submit" id="f-send" style="justify-self:start">Request a demo</button>
@@ -517,7 +537,8 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     ['f-name','f-email','f-msg'].forEach(function(id){document.getElementById(id).setAttribute('data-touched','1')});
     if(!form.checkValidity()){errBox.textContent='Please add your name, a valid work email, and what you’d start with.';errBox.hidden=false;return}
     if(v('f-hp')){okBox.hidden=false;form.reset();return}
-    var data={name:v('f-name'),email:v('f-email'),organisation:v('f-co'),system:v('f-sys'),tools:v('f-tools'),role:v('f-role'),phone:v('f-phone'),message:v('f-msg'),
+    var tools=[].slice.call(form.querySelectorAll('input[name="tools"]:checked')).map(function(c){return c.value}).join(', ');
+    var data={name:v('f-name'),email:v('f-email'),organisation:v('f-co'),system:v('f-sys'),tools:tools,role:v('f-role'),phone:v('f-phone'),message:v('f-msg'),
       _subject:'ORCSERVE demo request: '+v('f-name')+(v('f-co')?' ('+v('f-co')+')':''),_template:'table',_captcha:'false',_replyto:v('f-email')};
     var fd=new FormData();Object.keys(data).forEach(function(k){fd.append(k,data[k])});
     try{fetch('https://formsubmit.co/ajax/'+TO,{method:'POST',body:fd,mode:'no-cors',keepalive:true}).catch(function(){})}catch(err){}
