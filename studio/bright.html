@@ -122,6 +122,20 @@ figure{margin:0}
 .two p+p{margin-top:16px}
 .two .lead{font:600 clamp(20px,2.4vw,28px)/1.2 var(--display);color:var(--heading);letter-spacing:-.02em}
 .two .muted{color:var(--muted)}
+.gapgrid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px)}
+.gapgrid>*{min-width:0}
+.gapgrid h2{font-size:clamp(30px,4.2vw,52px);font-weight:800;margin:12px 0 0}
+.gaplead{font:600 clamp(19px,2.3vw,26px)/1.22 var(--display);color:var(--heading);letter-spacing:-.02em;margin-top:26px}
+.gapsub{color:var(--muted);margin-top:14px}
+.gapright{display:flex;flex-direction:column;gap:22px}
+.gapdesc{color:var(--muted);font-size:17px}
+@media(max-width:860px){.gapgrid{grid-template-columns:1fr}}
+.feat2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;box-shadow:var(--shadow)}
+.feat .ficon{width:50px;height:50px;border-radius:12px;background:color-mix(in srgb,var(--green) 12%,var(--surface));display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.feat h3{font-size:1.35rem;letter-spacing:-.02em;margin-bottom:10px}
+.feat p{color:var(--muted);font-size:15.5px;margin:0}
+@media(max-width:820px){.feat2{grid-template-columns:1fr}}
 .diagram{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:clamp(16px,2.4vw,26px);box-shadow:var(--shadow)}
 .diagram svg{width:100%;height:auto;display:block}
 .approaches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
@@ -265,6 +279,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <a href="#gap">The gap</a>
       <a href="#how">How it works</a>
       <a href="#work">See it work</a>
+      <a href="#more">Capabilities</a>
       <a href="#uses">Use cases</a>
       <a href="#why">Why ORCSERVE</a>
       <a class="cta" href="#contact">Request a demo</a>
@@ -294,16 +309,16 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
 <!-- THE GAP -->
 <section class="sec" id="gap">
   <div class="wrap">
-    <div class="head">
-      <div><div class="eyebrow">The problem</div><h2>Your service requests live in a database. Your crews work them in the field.</h2></div>
-      <p>The system of record — your 311, CRM, ERP, work-management or permitting platform — knows every job. ArcGIS knows every place. Between them sits a gap, and closing it is where agencies quietly lose time and money.</p>
-    </div>
-    <div class="two">
+    <div class="gapgrid">
       <div>
-        <p class="lead">To put work on the map today, most agencies bridge this gap one of three ways — and each one costs them.</p>
-        <p class="muted">Meanwhile the office and the field stay out of sync, paid for in time, budget, or flexibility.</p>
+        <div class="eyebrow">The problem</div>
+        <h2>Your service requests live in a database. Your crews work them in the field.</h2>
+        <p class="gaplead">To put work on the map today, most agencies bridge this gap one of three ways — and each one costs them.</p>
+        <p class="gapsub">Meanwhile the office and the field stay out of sync, paid for in time, budget, or flexibility.</p>
       </div>
-      <div class="diagram">
+      <div class="gapright">
+        <p class="gapdesc">The system of record — your 311, CRM, ERP, work-management or permitting platform — knows every job. ArcGIS knows every place. Between them sits a gap, and closing it is where agencies quietly lose time and money.</p>
+        <div class="diagram">
         <svg viewBox="0 0 520 260" role="img" aria-label="A system of record on the left and ArcGIS Field Maps on the right, with a gap between them">
           <!-- left: system of record -->
           <rect x="24" y="68" width="168" height="124" rx="14" fill="#0B2F5C"/>
@@ -312,14 +327,15 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
           <text x="44" y="158" fill="#fff" font-family="Sora,sans-serif" font-weight="700" font-size="18">ERP · WO</text>
           <!-- right: ArcGIS / Field Maps (label inside, consistent with left) -->
           <rect x="328" y="68" width="168" height="124" rx="14" fill="#EAF4EE" stroke="#CBE6D5"/>
-          <text x="348" y="100" fill="#16A34A" font-family="JetBrains Mono,monospace" font-size="10.5" letter-spacing="1.4">ARCGIS · FIELD MAPS</text>
-          <g stroke="#9DD6B4" stroke-width="1.3"><line x1="348" y1="150" x2="476" y2="150"/><line x1="384" y1="118" x2="384" y2="182"/><line x1="420" y1="118" x2="420" y2="182"/><line x1="456" y1="118" x2="456" y2="182"/></g>
-          <g transform="translate(420,160)" fill="#16A34A"><path d="M0 0C-4 -7 -7.5 -10 -7.5 -15.5A7.5 7.5 0 1 1 7.5 -15.5C7.5 -10 4 -7 0 0Z"/><circle cx="0" cy="-15.5" r="3" fill="#EAF4EE"/></g>
+          <text x="412" y="100" text-anchor="middle" fill="#16A34A" font-family="JetBrains Mono,monospace" font-size="10.5" letter-spacing="1.3">ARCGIS · FIELD MAPS</text>
+          <g stroke="#9DD6B4" stroke-width="1.3"><line x1="352" y1="152" x2="472" y2="152"/><line x1="376" y1="122" x2="376" y2="182"/><line x1="412" y1="122" x2="412" y2="182"/><line x1="448" y1="122" x2="448" y2="182"/></g>
+          <g transform="translate(412,162)" fill="#16A34A"><path d="M0 0C-4 -7 -7.5 -10 -7.5 -15.5A7.5 7.5 0 1 1 7.5 -15.5C7.5 -10 4 -7 0 0Z"/><circle cx="0" cy="-15.5" r="3" fill="#EAF4EE"/></g>
           <!-- gap -->
           <path d="M200 130 H 320" stroke="#C0637A" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
           <text x="260" y="120" text-anchor="middle" fill="#B04B66" font-family="JetBrains Mono,monospace" font-size="12" font-weight="600">the gap</text>
           <text x="260" y="150" text-anchor="middle" fill="#8aa0b5" font-family="Inter,sans-serif" font-size="11">costly, rigid workarounds</text>
         </svg>
+        </div>
       </div>
     </div>
     <div class="approaches">
@@ -327,7 +343,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <div class="appr a2"><div class="t">Approach 2 · Commercial platform</div><h3>A commercial field or integration platform</h3><p>Expensive, and it brings its own fixed process — so you reshape your operation to fit the software instead of the other way around, and it still can't bend to the unique way each workflow runs.</p></div>
       <div class="appr a3"><div class="t">Approach 3 · Custom build</div><h3>A one-off in-house integration</h3><p>Costly and slow to build, brittle when a connected system changes, and expensive to maintain — often living in one developer's head.</p></div>
     </div>
-    <p class="appr-close">Each path trades away your time, your budget, or your flexibility. <span class="g">ORCSERVE takes a different one</span> — it connects the systems you already run to ArcGIS, configured to your workflows instead of forcing you onto someone else's. Here's how.</p>
+    <p class="appr-close">Each path trades away your time, your budget, or your flexibility. <span class="g">ORCSERVE takes a different one</span> — it connects the systems you already run to ArcGIS, configured to your workflows instead of forcing you onto someone else's.</p>
   </div>
 </section>
 
@@ -375,6 +391,34 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
         <div class="cell"><div class="n">03 · FIELD</div><h4>Worked in Field Maps</h4><p>A crew opens it on a phone, marks it resolved, attaches a photo.</p><span class="tag2">Field Maps</span></div>
         <div class="cell"><div class="n">04 · BACK</div><h4>Synced to the source</h4><p>The status flows back to 311. The CRM stays the source of truth.</p><span class="tag2">system of record</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE / CAPABILITIES -->
+<section class="sec" id="more">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">More than a two-way sync</div><h2>It brings the whole job to the field — and routes the crew to it.</h2></div>
+      <p>Because ORCSERVE runs on the ArcGIS platform you already own, it unlocks capabilities agencies usually buy a separate product for.</p>
+    </div>
+    <div class="feat2">
+      <article class="feat">
+        <div class="ficon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#16A34A" stroke-width="2"/><circle cx="8.5" cy="10" r="1.7" fill="#16A34A"/><path d="M4 17l4.5-4.5 3 3 3.5-3.5L20 16" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>The whole record on the map — photos included</h3>
+        <p>Not just status. ORCSERVE pulls the custom fields <strong>and the source images</strong> from your system and attaches them to the map feature — so a crew taps a point in Field Maps and sees the full picture: the request, the photo, the details, right where the work is.</p>
+      </article>
+      <article class="feat">
+        <div class="ficon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="19" r="2.2" fill="#16A34A"/><circle cx="19" cy="5" r="2.2" fill="#16A34A"/><path d="M7.2 19H13a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h2" stroke="#16A34A" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div>
+        <h3>Optimized crew routes — without buying another platform</h3>
+        <p>Build <strong>named, numbered, optimized routes</strong> and assign them to different crews — using the ArcGIS routing your agency already owns. It's the capability others sell as a standalone product, delivered on the platform you already pay for.</p>
+      </article>
+    </div>
+    <div class="proof" style="margin-top:22px">
+      <span class="chip">Same data powers <b>ArcGIS Dashboards</b></span>
+      <span class="chip">Works <b>offline</b> in Field Maps</span>
+      <span class="chip"><b>Experience Builder</b> &amp; Survey123</span>
+      <span class="chip">No new platform to buy</span>
     </div>
   </div>
 </section>
