@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Connect Enterprise Systems to ArcGIS Field Operations | ORCSERVE</title>
+<meta name="description" content="ORCSERVE queries work from enterprise systems, powers ArcGIS field workflows, and synchronizes updates back to the system of record.">
+<meta name="theme-color" content="#0b2f5c">
+<meta property="og:title" content="Connect Enterprise Systems to ArcGIS Field Operations | ORCSERVE">
+<meta property="og:description" content="ORCSERVE queries work from enterprise systems, powers ArcGIS field workflows, and synchronizes updates back to the system of record.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="index">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand " href="index.html" aria-label="ORCSERVE home"><svg class="mark" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+<circle cx="30" cy="28" r="16" stroke="var(--blue)" stroke-width="7"/>
+<circle cx="50" cy="28" r="16" stroke="var(--navy)" stroke-width="7"/>
+<circle cx="40" cy="49" r="16" stroke="var(--green)" stroke-width="7"/></svg><span class="wm"><b>ORC</b>SERVE</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav"><a href="platform.html">Platform</a><a href="how-it-works.html">How It Works</a><a href="solutions.html">Solutions</a><a href="where-we-fit.html">Where We Fit</a><a href="workflow-assessment.html">Workflow Assessment</a><a href="resources.html">Resources</a><a href="about.html">About</a><a class="btn btn-sm" href="contact.html">Request Demo</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Enterprise integration for ArcGIS field operations</p>
+      <h1>Unlock the full power of ArcGIS&mdash;<span class="grad">without replacing your enterprise systems.</span></h1>
+      <p class="lead">ORCSERVE queries work from your system of record, puts it on the ArcGIS map to
+      power real field workflows, and synchronizes field updates back to the source&mdash;automatically.</p>
+      <div class="actions">
+        <a class="btn" href="contact.html">Request a Demo &rarr;</a>
+        <a class="btn btn-ghost" href="how-it-works.html">See how it works</a>
+      </div>
+      <ul class="proof">
+        <li>Working two-way sync, proven against ArcGIS Online</li>
+        <li>Configuration over custom code</li>
+        <li>Customer-hosted by default</li>
+      </ul>
+    </div>
+    <div class="hero-visual reveal">
+<svg class="flowdiagram" viewBox="0 0 780 470" role="img"
+     aria-label="Data flows from enterprise systems through ORCSERVE into ArcGIS field
+     operations, and field updates synchronize back to the system of record.">
+  <defs>
+    <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d4890"/><stop offset="1" stop-color="#082a52"/>
+    </linearGradient>
+    <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="var(--green)"/>
+    </marker>
+    <marker id="ah2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="var(--blue)"/>
+    </marker>
+  </defs>
+
+  <!-- flowing connectors -->
+  <path class="flowline" d="M232,150 H300" marker-end="url(#ah2)"/>
+  <path class="flowline d2" d="M548,150 H616" marker-end="url(#ah)"/>
+  <!-- return loop -->
+  <path class="flowline back" d="M690,300 V372 H90 V196" marker-end="url(#ah2)"/>
+
+  <!-- Enterprise systems -->
+  <g>
+    <rect x="70" y="70" width="162" height="160" rx="14" class="node"/>
+    <text x="151" y="96" class="node-title">ENTERPRISE SYSTEMS</text>
+    <text x="151" y="124" class="node-line">CRM &middot; ERP</text>
+    <text x="151" y="148" class="node-line">Asset Management</text>
+    <text x="151" y="172" class="node-line">Work Management</text>
+    <text x="151" y="196" class="node-line">Permitting &middot; 311</text>
+  </g>
+
+  <!-- ORCSERVE core -->
+  <g>
+    <rect x="300" y="60" width="248" height="180" rx="16" class="core"/>
+    <text x="424" y="92" class="core-title">ORCSERVE</text>
+    <text x="424" y="114" class="core-sub">INTEGRATION &amp; SYNC PLATFORM</text>
+    <line x1="324" y1="128" x2="524" y2="128" class="hair"/>
+    <text x="424" y="152" class="core-line">Configurable Connectors</text>
+    <text x="424" y="176" class="core-line">Canonical Data Model</text>
+    <text x="424" y="200" class="core-line">Bi-directional Sync Engine</text>
+    <text x="424" y="224" class="core-line">Validation &middot; Monitoring</text>
+  </g>
+
+  <!-- ArcGIS -->
+  <g>
+    <rect x="616" y="70" width="150" height="160" rx="14" class="node arc"/>
+    <text x="691" y="96" class="node-title">ARCGIS ONLINE</text>
+    <text x="691" y="124" class="node-line">Feature Layers</text>
+    <text x="691" y="148" class="node-line">Field Maps</text>
+    <text x="691" y="172" class="node-line">Dashboards</text>
+    <text x="691" y="196" class="node-line">Survey123</text>
+  </g>
+
+  <!-- return label -->
+  <g>
+    <rect x="250" y="348" width="300" height="48" rx="12" class="ret"/>
+    <text x="400" y="370" class="ret-title">UPDATES &amp; STATUS</text>
+    <text x="400" y="386" class="ret-sub">Status &middot; Photos &middot; Notes &middot; Inspections &rarr; back to source</text>
+  </g>
+</svg></div>
+  </div>
+  <div class="valuebar"><div class="container valuegrid">
+    <div><b>01</b> Query work from source systems</div>
+    <div><b>02</b> Put work on the ArcGIS map</div>
+    <div><b>03</b> Run field workflows</div>
+    <div><b>04</b> Sync updates back</div>
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="head center"><p class="eyebrow">The problem ORCSERVE solves</p><h2>Three ways agencies manage field work today &mdash; and where each falls short</h2><p>Most organizations rely on one of these approaches. Each can work; each carries real trade-offs.</p></div>
+    <div class="approach-grid"><article class="approach"><span class="tag">Approach 01</span><h3>Manual processes</h3><div class="mini-flow"><span>Source system</span><i>&darr;</i><span>Excel</span><i>&darr;</i><span>Printed sheets</span><i>&darr;</i><span>Manual re-entry</span></div><ul class="trade"><li>Duplicate entry and avoidable errors</li><li>Delayed updates, poor visibility</li><li>Hard to monitor or scale</li><li>No integrated GIS workflow</li></ul></article><article class="approach"><span class="tag">Approach 02</span><h3>Commercial field platforms</h3><div class="mini-flow"><span>Source system</span><i>&darr;</i><span>Vendor platform</span><i>&darr;</i><span>Vendor app</span></div><ul class="trade"><li>High license and implementation cost</li><li>Limited fit for unique workflows</li><li>Vendor lock-in</li><li>Doesn't unlock the full ArcGIS ecosystem</li></ul></article><article class="approach"><span class="tag">Approach 03</span><h3>Custom integration code</h3><div class="mini-flow"><span>Source system</span><i>&darr;</i><span>Custom code</span><i>&darr;</i><span>ArcGIS</span></div><ul class="trade"><li>Expensive to build</li><li>Heavy maintenance burden</li><li>Knowledge trapped with a few developers</li><li>Every workflow a new project</li></ul></article></div>
+    <div class="orc-callout reveal">
+      <div>
+        <p class="eyebrow">A better approach</p>
+        <h3>Your enterprise systems manage the business. ArcGIS manages the field. ORCSERVE connects the two.</h3>
+        <p>Use the systems you already own, activate the full ArcGIS ecosystem, and keep the
+        system of record current through configurable two-way synchronization.</p>
+        <a class="btn" href="how-it-works.html">Explore the workflow &rarr;</a>
+      </div>
+      <ol class="looplist"><li class="loop-step src"><span>1</span><p>System of Record</p></li><li class="loop-step "><span>2</span><p>Query work data</p></li><li class="loop-step core"><span>3</span><p>ORCSERVE</p></li><li class="loop-step arc"><span>4</span><p>ArcGIS Feature Layers</p></li><li class="loop-step arc"><span>5</span><p>Field Maps &middot; Dashboards &middot; Experience Builder &middot; Survey123</p></li><li class="loop-step "><span>6</span><p>Field Workforce</p></li><li class="loop-step "><span>7</span><p>Status &middot; Photos &middot; Notes &middot; Inspections</p></li><li class="loop-step "><span>8</span><p>Synchronize back</p></li><li class="loop-step src"><span>9</span><p>System of Record</p></li></ol>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="head center"><p class="eyebrow">Simple to understand</p><h2>Connect. Empower. Synchronize.</h2></div>
+    <div class="steps"><article class="step reveal"><strong>Step 1 &middot; Connect</strong><h3>Query work from the source system</h3><p>ORCSERVE reads from CRM, ERP, asset, work-management, permitting, and custom systems through approved APIs or databases — you pick the records and fields that matter.</p><ul><li>Select the records that matter</li><li>Map and standardize source fields</li><li>Validate before anything is published</li></ul></article><article class="step reveal"><strong>Step 2 &middot; Empower</strong><h3>Put the work on the ArcGIS map</h3><p>Work becomes live ArcGIS features, so teams can run real field workflows across the platform they already own.</p><ul><li>Field Maps, online and offline</li><li>Dashboards and live visibility</li><li>Experience Builder, Survey123, routing, analytics</li></ul></article><article class="step reveal"><strong>Step 3 &middot; Synchronize</strong><h3>Keep the system of record current</h3><p>Field updates are validated and written back to the enterprise system — automatically, with loop prevention and an audit trail.</p><ul><li>Status and completion dates</li><li>Notes, photos, inspections</li><li>Crew, asset, and custom fields</li></ul></article></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="head center"><p class="eyebrow">Built for your workflows</p><h2>Your workflows aren't one-size-fits-all. Your software shouldn't be either.</h2><p>No two cities run service requests the same way &mdash; and inside one city, a pothole, an illegal-dumping report, a downed sign, and a missed pickup each follow a different path.</p></div>
+    <div class="split">
+      <div>
+        <p>All-in-one platforms bring their <em>own</em> fixed process and ask your operation to
+        conform to it &mdash; the workflows that make your city run don't fit the box.</p>
+        <p><strong>OrcServe adapts to the workflows you already run &mdash; per request type &mdash;
+        and keeps your system of record in charge. The map fits your work.</strong></p>
+        <ul class="check"><li>Configurable per request type</li><li>Keeps your system of record
+        &mdash; no rip-and-replace</li><li>Your process, made spatial and field-ready</li></ul>
+      </div>
+      <div class="ways">
+        <article class="way"><span class="way-tag">Migration</span><p>Adopt a platform's built-in
+        process and reshape your operation around it.</p></article>
+        <article class="way orc"><span class="way-tag">Integration</span><p>Keep your systems and
+        workflows &mdash; and connect them to ArcGIS. <strong>OrcServe is the integration.</strong></p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="signature"><div class="container">
+  <p class="statement">ORCSERVE turns enterprise records into intelligent, map-based field
+  workflows&mdash;and keeps the system of record up to date.</p>
+</div></section>
+
+<section class="section dark">
+  <div class="container">
+    <div class="head center"><p class="eyebrow">Deployment flexibility</p><h2>Run ORCSERVE where your organization prefers.</h2><p>Keep credentials and operational data in an approved, customer-controlled environment.</p></div>
+    <div class="grid4"><article class="card"><div class="ic">&#9635;</div><h3>On-premises</h3><p>Runs on customer-managed infrastructure inside the agency network.</p></article><article class="card"><div class="ic">&#9729;</div><h3>Azure</h3><p>Deploys in the customer's Microsoft Azure tenant.</p></article><article class="card"><div class="ic">AWS</div><h3>AWS</h3><p>Deploys in an approved AWS environment.</p></article><article class="card"><div class="ic">&#10003;</div><h3>Customer-controlled</h3><p>Credentials, data, and logs stay in the approved environment.</p></article></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="head center"><p class="eyebrow">Built for distributed operations</p><h2>One platform. Many field workflows.</h2></div>
+    <div class="grid4 industries"><article class="industry"><h3>Public Works</h3><p>311, sanitation, streets, signs, litter, bulk pickup, inspections.</p></article><article class="industry"><h3>Utilities</h3><p>Water, wastewater, electric, gas, outages, maintenance, assets.</p></article><article class="industry"><h3>Transportation</h3><p>Roads, rail, traffic assets, incidents, signs, signals.</p></article><article class="industry"><h3>Campuses & Facilities</h3><p>Universities, airports, hospitals, ports, industrial sites.</p></article></div>
+    <div class="actions center"><a class="btn btn-ghost" href="solutions.html">Explore solutions</a></div>
+  </div>
+</section>
+
+<section class="cta"><div class="container cta-grid">
+  <div><p class="eyebrow">Start a conversation</p>
+    <h2>Ready to connect your systems and empower your field teams?</h2>
+    <p>Tell us how work reaches the field today&mdash;we'll help you evaluate a more connected approach.</p></div>
+  <div class="actions">
+    <a class="btn btn-light" href="contact.html">Request Demo</a>
+    <a class="btn btn-outline" href="workflow-assessment.html">Workflow Assessment</a>
+  </div>
+</div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <a class="brand on-dark" href="index.html" aria-label="ORCSERVE home"><svg class="mark" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+<circle cx="30" cy="28" r="16" stroke="var(--blue)" stroke-width="7"/>
+<circle cx="50" cy="28" r="16" stroke="var(--navy)" stroke-width="7"/>
+<circle cx="40" cy="49" r="16" stroke="var(--green)" stroke-width="7"/></svg><span class="wm"><b>ORC</b>SERVE</span></a>
+      <p>Your enterprise systems manage the business. ArcGIS manages the field. ORCSERVE connects the two.</p>
+    </div>
+    <div><h4>Platform</h4><a href="platform.html">Platform</a><a href="how-it-works.html">How It Works</a><a href="where-we-fit.html">Where We Fit</a><a href="workflow-assessment.html">Workflow Assessment</a></div>
+    <div><h4>Company</h4><a href="about.html">About</a><a href="solutions.html">Solutions</a><a href="resources.html">Resources</a></div>
+    <div><h4>Contact</h4><a href="mailto:info@orcserve.com">info@orcserve.com</a><span>McLean, Virginia</span><a href="contact.html">Request a demo</a></div>
+  </div>
+  <div class="container foot-bottom">
+    <span>&copy; <span data-year></span> ORCSERVE. Draft site — pre-launch.</span>
+    <span>Connect. Synchronize. Empower.</span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

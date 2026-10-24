@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ORCSERVE — accent palette comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0e12; --paper:#f7f8f6; --line-d:#242a32; --mut-d:#9aa6b2;
+  --fd:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --fb:"Inter",ui-sans-serif,system-ui,sans-serif;
+  --fm:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--fb);background:var(--paper);color:var(--ink)}
+.wrap{width:min(calc(100% - 44px),1140px);margin-inline:auto}
+h1,h2{font-family:var(--fd);letter-spacing:-.03em;line-height:1.05;margin:0}
+.intro{padding:40px 0 8px;text-align:center}
+.intro h1{font-size:1.9rem;margin-bottom:8px}
+.intro p{color:#5b6570;max-width:56ch;margin:0 auto}
+
+.label{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:26px 0 14px}
+.label .name{font-family:var(--fd);font-weight:700;font-size:1.15rem;display:flex;align-items:center;gap:10px}
+.label .swatches{display:flex;gap:6px;align-items:center;font-family:var(--fm);font-size:.75rem;color:#5b6570}
+.sw{width:34px;height:20px;border-radius:5px;border:1px solid rgba(0,0,0,.12)}
+.mk{width:26px;height:26px}.mk .a{stroke:var(--accent)}.mk .n{stroke:#8894a2}
+
+.demo{background:var(--ink);color:var(--paper);position:relative;overflow:hidden;border-radius:16px;margin-bottom:16px}
+.demo:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);background-size:52px 52px;opacity:.22;mask:radial-gradient(120% 90% at 72% 0,#000,transparent 75%)}
+.demo:after{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-220px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 65%)}
+.hero-in{position:relative;z-index:1;padding:56px 40px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.kick{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-d);margin:0}
+.hero-in h2{font-size:clamp(1.9rem,3.4vw,2.9rem);color:var(--paper);margin:14px 0}
+.hero-in h2 .fade{color:var(--mut-d)}
+.sub{color:var(--mut-d);font-size:1.05rem;max-width:42ch;margin:0 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-family:var(--fd);font-weight:600;font-size:.9rem;padding:12px 20px;border-radius:100px;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent)}
+.btn.line{background:transparent;color:var(--paper);border-color:var(--line-d)}
+.micro{margin-top:22px;font-family:var(--fm);font-size:.74rem;color:var(--mut-d)}
+.micro b{color:var(--accent-d);font-weight:500}
+.term{background:#06090d;border:1px solid var(--line-d);border-radius:12px;box-shadow:0 30px 70px rgba(0,0,0,.5);font-family:var(--fm);font-size:.78rem}
+.term .top{display:flex;gap:6px;align-items:center;padding:10px 13px;border-bottom:1px solid var(--line-d);color:var(--mut-d)}
+.term .top i{width:10px;height:10px;border-radius:50%;background:#333b45}
+.term .top span{margin-left:8px;font-size:.72rem}
+.term .body{padding:14px 16px;line-height:1.9;color:#c7d2de}
+.term .d{color:#6b7683}.term .ok{color:var(--accent-d)}.term .cr b{color:var(--accent-d);font-weight:500}.term .warn{color:#e9b949}
+@media(max-width:860px){.hero-in{grid-template-columns:1fr;gap:26px;padding:40px 26px}}
+</style>
+</head>
+<body>
+<div class="wrap intro">
+  <h1>Same layout. Three accents.</h1>
+  <p>Identical monochrome-ink base — only the accent color changes. Pick the one that feels like ORCSERVE.</p>
+</div>
+
+<!-- ============ AMBER ============ -->
+<div class="wrap" style="--accent:#f5a01a;--accent-d:#ffb84d;--accent-ink:#2a1a02;--glow:rgba(245,160,26,.20)">
+  <div class="label">
+    <div class="name"><svg class="mk" viewBox="0 0 80 80" fill="none"><circle class="a" cx="30" cy="28" r="16" stroke-width="7"/><circle class="n" cx="50" cy="28" r="16" stroke-width="7"/><circle class="a" cx="40" cy="49" r="16" stroke-width="7"/></svg>Amber signal</div>
+    <div class="swatches"><span class="sw" style="background:#f5a01a"></span>#F5A01A &nbsp; <span class="sw" style="background:#ffb84d"></span>#FFB84D</div>
+  </div>
+  <section class="demo"><div class="hero-in">
+    <div>
+      <p class="kick">Enterprise systems &harr; ArcGIS</p>
+      <h2>Every work order on the map.<br><span class="fade">Every field update back in your system of record.</span></h2>
+      <p class="sub">The two-way sync layer between the systems you already run and ArcGIS Field Maps. Configured, not custom-coded.</p>
+      <div class="cta"><a class="btn">Request a demo &rarr;</a><a class="btn line">See it run</a></div>
+      <p class="micro">Working today &middot; <b>proven two-way sync against ArcGIS Online</b></p>
+    </div>
+    <div class="term"><div class="top"><i></i><i></i><i></i><span>orcserve — live sync run</span></div><div class="body">
+<span class="d">$ orcserve sync --deployment fairfax-311</span><br>
+<span class="d">16:27:13</span> health &nbsp;source:<span class="ok">ok</span> arcgis:<span class="ok">ok</span> db:<span class="ok">ok</span><br>
+<span class="cr">&nbsp;<b>+</b> created SR-1001 pothole <span class="d">status=new</span> [point]</span><br>
+<span class="cr">&nbsp;<b>+</b> created SR-1002 streetlight <span class="d">status=new</span> [point]</span><br>
+<span class="warn">&nbsp;! SR-1004 no location — flagged, not dropped</span><br>
+<span class="d">16:27:27</span> inbound done <span class="ok">created=4</span><br>
+<span class="ok">sync complete.</span>
+    </div></div>
+  </div></section>
+</div>
+
+<!-- ============ INDIGO ============ -->
+<div class="wrap" style="--accent:#6d5efc;--accent-d:#a99cff;--accent-ink:#ffffff;--glow:rgba(109,94,252,.22)">
+  <div class="label">
+    <div class="name"><svg class="mk" viewBox="0 0 80 80" fill="none"><circle class="a" cx="30" cy="28" r="16" stroke-width="7"/><circle class="n" cx="50" cy="28" r="16" stroke-width="7"/><circle class="a" cx="40" cy="49" r="16" stroke-width="7"/></svg>Electric indigo</div>
+    <div class="swatches"><span class="sw" style="background:#6d5efc"></span>#6D5EFC &nbsp; <span class="sw" style="background:#a99cff"></span>#A99CFF</div>
+  </div>
+  <section class="demo"><div class="hero-in">
+    <div>
+      <p class="kick">Enterprise systems &harr; ArcGIS</p>
+      <h2>Every work order on the map.<br><span class="fade">Every field update back in your system of record.</span></h2>
+      <p class="sub">The two-way sync layer between the systems you already run and ArcGIS Field Maps. Configured, not custom-coded.</p>
+      <div class="cta"><a class="btn">Request a demo &rarr;</a><a class="btn line">See it run</a></div>
+      <p class="micro">Working today &middot; <b>proven two-way sync against ArcGIS Online</b></p>
+    </div>
+    <div class="term"><div class="top"><i></i><i></i><i></i><span>orcserve — live sync run</span></div><div class="body">
+<span class="d">$ orcserve sync --deployment fairfax-311</span><br>
+<span class="d">16:27:13</span> health &nbsp;source:<span class="ok">ok</span> arcgis:<span class="ok">ok</span> db:<span class="ok">ok</span><br>
+<span class="cr">&nbsp;<b>+</b> created SR-1001 pothole <span class="d">status=new</span> [point]</span><br>
+<span class="cr">&nbsp;<b>+</b> created SR-1002 streetlight <span class="d">status=new</span> [point]</span><br>
+<span class="warn">&nbsp;! SR-1004 no location — flagged, not dropped</span><br>
+<span class="d">16:27:27</span> inbound done <span class="ok">created=4</span><br>
+<span class="ok">sync complete.</span>
+    </div></div>
+  </div></section>
+</div>
+
+<!-- ============ EMERALD (current) ============ -->
+<div class="wrap" style="--accent:#10b981;--accent-d:#34d8a4;--accent-ink:#04160f;--glow:rgba(16,185,129,.20)">
+  <div class="label">
+    <div class="name"><svg class="mk" viewBox="0 0 80 80" fill="none"><circle class="a" cx="30" cy="28" r="16" stroke-width="7"/><circle class="n" cx="50" cy="28" r="16" stroke-width="7"/><circle class="a" cx="40" cy="49" r="16" stroke-width="7"/></svg>Emerald (current)</div>
+    <div class="swatches"><span class="sw" style="background:#10b981"></span>#10B981 &nbsp; <span class="sw" style="background:#34d8a4"></span>#34D8A4</div>
+  </div>
+  <section class="demo"><div class="hero-in">
+    <div>
+      <p class="kick">Enterprise systems &harr; ArcGIS</p>
+      <h2>Every work order on the map.<br><span class="fade">Every field update back in your system of record.</span></h2>
+      <p class="sub">The two-way sync layer between the systems you already run and ArcGIS Field Maps. Configured, not custom-coded.</p>
+      <div class="cta"><a class="btn">Request a demo &rarr;</a><a class="btn line">See it run</a></div>
+      <p class="micro">Working today &middot; <b>proven two-way sync against ArcGIS Online</b></p>
+    </div>
+    <div class="term"><div class="top"><i></i><i></i><i></i><span>orcserve — live sync run</span></div><div class="body">
+<span class="d">$ orcserve sync --deployment fairfax-311</span><br>
+<span class="d">16:27:13</span> health &nbsp;source:<span class="ok">ok</span> arcgis:<span class="ok">ok</span> db:<span class="ok">ok</span><br>
+<span class="cr">&nbsp;<b>+</b> created SR-1001 pothole <span class="d">status=new</span> [point]</span><br>
+<span class="cr">&nbsp;<b>+</b> created SR-1002 streetlight <span class="d">status=new</span> [point]</span><br>
+<span class="warn">&nbsp;! SR-1004 no location — flagged, not dropped</span><br>
+<span class="d">16:27:27</span> inbound done <span class="ok">created=4</span><br>
+<span class="ok">sync complete.</span>
+    </div></div>
+  </div></section>
+</div>
+
+<div class="wrap" style="padding:24px 0 60px;text-align:center;color:#5b6570;font-size:.9rem">
+  My lean: <b>Amber</b> — it's the furthest from generic-SaaS-blue and ArcGIS-green, reads operational/field, and pops hardest on ink.
+</div>
+</body>
+</html>

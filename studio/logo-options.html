@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ORCSERVE — logo concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b2f5c;--green:#10b981;--paper:#f7f8f6;--mut:#5b6570;
+  --fd:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;--fb:"Inter",ui-sans-serif,system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--fb);background:var(--paper);color:var(--ink)}
+.wrap{width:min(calc(100% - 44px),1080px);margin:0 auto}
+h1{font-family:var(--fd);font-size:1.9rem;letter-spacing:-.03em;margin:0 0 6px}
+.intro{padding:40px 0 10px;text-align:center}
+.intro p{color:var(--mut);max-width:58ch;margin:0 auto}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:24px 0 60px}
+.card{border:1px solid #e2e6df;border-radius:16px;overflow:hidden;background:#fff}
+.card .hd{padding:22px 24px 10px}
+.card .hd .tag{font-family:var(--fd);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.card .hd h2{font-family:var(--fd);font-size:1.3rem;letter-spacing:-.02em;margin:6px 0 8px}
+.card .hd p{color:var(--mut);font-size:.9rem;margin:0;min-height:2.6em}
+.light-row{display:flex;align-items:center;gap:22px;padding:20px 24px}
+.mark{width:60px;height:60px;flex:none}
+.mark.sm{width:30px;height:30px}
+.wordmark{display:flex;align-items:center;gap:11px;font-family:var(--fd);font-weight:700;font-size:1.5rem;letter-spacing:-.01em}
+.wordmark b{color:var(--ink)}.wordmark .s{color:var(--green)}
+.dark-row{display:flex;align-items:center;gap:14px;background:#0b0e12;padding:16px 24px}
+.dark-row .wordmark b{color:#fff}.dark-row .wordmark .s{color:#34d8a4}
+.sep{height:1px;background:#eef1ec}
+.note{text-align:center;color:var(--mut);font-size:.9rem;padding:0 0 60px}
+</style>
+</head>
+<body>
+<div class="wrap intro">
+  <h1>Four logo directions</h1>
+  <p>Same green, same ORCSERVE wordmark — four different marks, each shown large, in the lockup, and reversed on dark. Each one tries to <em>mean</em> something about what ORCSERVE does.</p>
+</div>
+
+<div class="wrap grid">
+
+  <!-- A: BRIDGE -->
+  <div class="card">
+    <div class="hd"><span class="tag">Option A</span><h2>The Bridge</h2>
+      <p>Two systems (one dark, one green) joined by an arc. Literal: ORCSERVE bridges your system of record and ArcGIS.</p></div>
+    <div class="light-row">
+      <svg class="mark" viewBox="0 0 48 48" fill="none"><path d="M9 33 Q24 7 39 33" stroke="#10b981" stroke-width="3.6" stroke-linecap="round"/><circle cx="9" cy="33" r="5.4" fill="#0b2f5c"/><circle cx="39" cy="33" r="5.4" fill="#10b981"/></svg>
+      <div class="wordmark"><svg class="mark sm" viewBox="0 0 48 48" fill="none"><path d="M9 33 Q24 7 39 33" stroke="#10b981" stroke-width="3.6" stroke-linecap="round"/><circle cx="9" cy="33" r="5.4" fill="#0b2f5c"/><circle cx="39" cy="33" r="5.4" fill="#10b981"/></svg><span><b>ORC</b><span class="s">SERVE</span></span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="dark-row"><svg class="mark sm" viewBox="0 0 48 48" fill="none"><path d="M9 33 Q24 7 39 33" stroke="#34d8a4" stroke-width="3.6" stroke-linecap="round"/><circle cx="9" cy="33" r="5.4" fill="#c7d2de"/><circle cx="39" cy="33" r="5.4" fill="#34d8a4"/></svg><div class="wordmark"><span><b>ORC</b><span class="s">SERVE</span></span></div></div>
+  </div>
+
+  <!-- B: PIN -->
+  <div class="card">
+    <div class="hd"><span class="tag">Option B</span><h2>The Field Pin</h2>
+      <p>The map pin every field worker already knows — with a solid core. Says "location, field work, GIS" instantly.</p></div>
+    <div class="light-row">
+      <svg class="mark" viewBox="0 0 48 48" fill="none"><path d="M24 6 C16.8 6 11 11.8 11 19 C11 28 24 41 24 41 C24 41 37 28 37 19 C37 11.8 31.2 6 24 6 Z" stroke="#10b981" stroke-width="3.6" stroke-linejoin="round"/><circle cx="24" cy="19" r="4.6" fill="#0b2f5c"/></svg>
+      <div class="wordmark"><svg class="mark sm" viewBox="0 0 48 48" fill="none"><path d="M24 6 C16.8 6 11 11.8 11 19 C11 28 24 41 24 41 C24 41 37 28 37 19 C37 11.8 31.2 6 24 6 Z" stroke="#10b981" stroke-width="3.6" stroke-linejoin="round"/><circle cx="24" cy="19" r="4.6" fill="#0b2f5c"/></svg><span><b>ORC</b><span class="s">SERVE</span></span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="dark-row"><svg class="mark sm" viewBox="0 0 48 48" fill="none"><path d="M24 6 C16.8 6 11 11.8 11 19 C11 28 24 41 24 41 C24 41 37 28 37 19 C37 11.8 31.2 6 24 6 Z" stroke="#34d8a4" stroke-width="3.6" stroke-linejoin="round"/><circle cx="24" cy="19" r="4.6" fill="#c7d2de"/></svg><div class="wordmark"><span><b>ORC</b><span class="s">SERVE</span></span></div></div>
+  </div>
+
+  <!-- C: TWO-WAY -->
+  <div class="card">
+    <div class="hd"><span class="tag">Option C</span><h2>Two-Way Sync</h2>
+      <p>Up and down arrows — data out to the field, updates back to the source. Says exactly what the product is.</p></div>
+    <div class="light-row">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#10b981" stroke-width="3.6" fill="none"><line x1="18" y1="13" x2="18" y2="35"/><polyline points="12,19 18,13 24,19"/></g><g stroke="#0b2f5c" stroke-width="3.6" fill="none"><line x1="30" y1="13" x2="30" y2="35"/><polyline points="24,29 30,35 36,29"/></g></svg>
+      <div class="wordmark"><svg class="mark sm" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#10b981" stroke-width="3.6" fill="none"><line x1="18" y1="13" x2="18" y2="35"/><polyline points="12,19 18,13 24,19"/></g><g stroke="#0b2f5c" stroke-width="3.6" fill="none"><line x1="30" y1="13" x2="30" y2="35"/><polyline points="24,29 30,35 36,29"/></g></svg><span><b>ORC</b><span class="s">SERVE</span></span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="dark-row"><svg class="mark sm" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#34d8a4" stroke-width="3.6" fill="none"><line x1="18" y1="13" x2="18" y2="35"/><polyline points="12,19 18,13 24,19"/></g><g stroke="#c7d2de" stroke-width="3.6" fill="none"><line x1="30" y1="13" x2="30" y2="35"/><polyline points="24,29 30,35 36,29"/></g></svg><div class="wordmark"><span><b>ORC</b><span class="s">SERVE</span></span></div></div>
+  </div>
+
+  <!-- D: MONOGRAM O -->
+  <div class="card">
+    <div class="hd"><span class="tag">Option D</span><h2>The "O" Monogram</h2>
+      <p>ORCSERVE's initial as a two-halves ring — two systems joined into one. Simple, scalable, works as a favicon.</p></div>
+    <div class="light-row">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" stroke-linecap="round"><path d="M24 8 A16 16 0 0 0 24 40" stroke="#0b2f5c" stroke-width="5"/><path d="M24 8 A16 16 0 0 1 24 40" stroke="#10b981" stroke-width="5"/></svg>
+      <div class="wordmark"><svg class="mark sm" viewBox="0 0 48 48" fill="none" stroke-linecap="round"><path d="M24 8 A16 16 0 0 0 24 40" stroke="#0b2f5c" stroke-width="5"/><path d="M24 8 A16 16 0 0 1 24 40" stroke="#10b981" stroke-width="5"/></svg><span><b>ORC</b><span class="s">SERVE</span></span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="dark-row"><svg class="mark sm" viewBox="0 0 48 48" fill="none" stroke-linecap="round"><path d="M24 8 A16 16 0 0 0 24 40" stroke="#c7d2de" stroke-width="5"/><path d="M24 8 A16 16 0 0 1 24 40" stroke="#34d8a4" stroke-width="5"/></svg><div class="wordmark"><span><b>ORC</b><span class="s">SERVE</span></span></div></div>
+  </div>
+
+</div>
+
+<p class="wrap note">My lean: <b>Option B (Field Pin)</b> for this audience — it speaks their language instantly — with <b>Option A (Bridge)</b> a close second for how literally it tells the story.</p>
+</body>
+</html>
