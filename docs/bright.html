@@ -318,7 +318,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     </div>
     <div class="approaches">
       <div class="appr a1"><div class="t">Approach 1 · Manual</div><h3>Spreadsheets &amp; re-keying</h3><p>Crews enter the same job into 311, a spreadsheet and a map by hand. It's slow and error-prone, and updates get lost, duplicated, or logged days late.</p></div>
-      <div class="appr a2"><div class="t">Approach 2 · Off-the-shelf</div><h3>A COTS all-in-one platform</h3><p>Expensive, and it brings its own fixed process — so you reshape your operation to fit the software, and still can't bend it to the unique way each workflow actually runs.</p></div>
+      <div class="appr a2"><div class="t">Approach 2 · Commercial platform</div><h3>A commercial field or integration platform</h3><p>Expensive, and it brings its own fixed process — so you reshape your operation to fit the software instead of the other way around, and it still can't bend to the unique way each workflow runs.</p></div>
       <div class="appr a3"><div class="t">Approach 3 · Custom build</div><h3>A one-off in-house integration</h3><p>Costly and slow to build, brittle when a connected system changes, and expensive to maintain — often living in one developer's head.</p></div>
     </div>
     <p class="appr-close">Each path trades away your time, your budget, or your flexibility. <span class="g">ORCSERVE takes a different one</span> — it connects the systems you already run to ArcGIS, configured to your workflows instead of forcing you onto someone else's. Here's how.</p>
@@ -466,10 +466,10 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     </div>
     <form id="demo-form" novalidate>
       <label><span>Name <span class="req">*</span></span><input id="f-name" name="name" autocomplete="name" required></label>
-      <label><span>Work email <span class="req">*</span></span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
+      <label><span>Email <span class="req">*</span></span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
       <label>Agency / organization<input id="f-co" name="organisation" autocomplete="organization"></label>
       <label>Your system of record<select id="f-sys" name="system"><option>311 / CRM</option><option>Cityworks</option><option>Salesforce</option><option>SAP / ERP</option><option>Work-management / CMMS</option><option>Permitting</option><option>Other / not sure</option></select></label>
-      <label>Field / integration software in use <span style="color:var(--muted);font-weight:500">(optional)</span><select id="f-tools" name="tools"><option value="">— none / not sure —</option><option>Esri Field Maps</option><option>Cityworks</option><option>Rubicon / Routeware</option><option>VertiGIS</option><option>Cartegraph</option><option>Accela</option><option>Salesforce</option><option>FME (Safe Software)</option><option>Custom in-house app</option><option>Other (describe below)</option></select></label>
+      <label>Field or integration platform you use today<select id="f-tools" name="tools"><option value="">— none / not sure —</option><option>Esri Field Maps</option><option>Cityworks</option><option>Rubicon / Routeware</option><option>VertiGIS</option><option>Cartegraph</option><option>Accela</option><option>Salesforce</option><option>FME (Safe Software)</option><option>Custom in-house app</option><option>Other (describe below)</option></select></label>
       <label>Role<input id="f-role" name="role" autocomplete="organization-title"></label>
       <label>Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
       <label class="full"><span>Tell us about your workflow <span class="req">*</span></span><textarea id="f-msg" name="message" required placeholder="Share as much or as little as you like — even a sentence helps us tailor the demo. We'll go deeper on the call."></textarea></label>
@@ -492,7 +492,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <div class="cols">
         <div><h4>Product</h4><a href="#how">How it works</a><a href="#work">See it work</a><a href="#uses">Use cases</a><a href="#why">Why ORCSERVE</a></div>
         <div><h4>Built on</h4><a href="#why">Open311</a><a href="#why">ArcGIS REST</a><a href="#why">Esri Field Maps</a></div>
-        <div><h4>Contact</h4><a href="#contact">Request a demo</a><a href="mailto:info@orcserve.com">info@orcserve.com</a></div>
+        <div><h4>Contact</h4><a href="#contact">Request a demo</a></div>
       </div>
     </div>
     <div class="fine">© 2026 ORCSERVE · an Amrot product. Configured, not custom-coded. Terminal output and figures are illustrative.</div>
@@ -501,10 +501,10 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
 
 <script>
 (function(){
-  // Contact form via FormSubmit (free, static-friendly; delivers to your inbox, email kept out of the page).
-  // SETUP: replace FORM_ID below with your FormSubmit code. Get it by submitting this form once to
-  // https://formsubmit.co/your@email.com (you'll confirm by email), then use the hashed code it gives you.
-  var FORM_ID='REPLACE_WITH_FORMSUBMIT_ID';
+  // Contact form via FormSubmit — submissions are delivered to the inbox below.
+  // NOTE: the FIRST submission triggers a one-time FormSubmit activation email to that address; click the link once to start receiving.
+  // For privacy you can later swap this for a FormSubmit hashed code so the address isn't in the page source.
+  var TO=['araya.kebede','gmail.com'].join('@');
 
   var btn=document.getElementById('menuBtn'),links=document.getElementById('navLinks');
   btn.addEventListener('click',function(){var o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
@@ -519,13 +519,8 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     if(v('f-hp')){okBox.hidden=false;form.reset();return}
     var data={name:v('f-name'),email:v('f-email'),organisation:v('f-co'),system:v('f-sys'),tools:v('f-tools'),role:v('f-role'),phone:v('f-phone'),message:v('f-msg'),
       _subject:'ORCSERVE demo request: '+v('f-name')+(v('f-co')?' ('+v('f-co')+')':''),_template:'table',_captcha:'false',_replyto:v('f-email')};
-    if(FORM_ID && FORM_ID.indexOf('REPLACE')<0){
-      var fd=new FormData();Object.keys(data).forEach(function(k){fd.append(k,data[k])});
-      try{fetch('https://formsubmit.co/ajax/'+FORM_ID,{method:'POST',body:fd,mode:'no-cors',keepalive:true}).catch(function(){})}catch(err){}
-    }else{
-      // Fallback until FormSubmit is configured: open the visitor's mail client.
-      window.location.href='mailto:info@orcserve.com?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(data.message+'\n\n'+data.name+' · '+data.email+' · '+data.phone);
-    }
+    var fd=new FormData();Object.keys(data).forEach(function(k){fd.append(k,data[k])});
+    try{fetch('https://formsubmit.co/ajax/'+TO,{method:'POST',body:fd,mode:'no-cors',keepalive:true}).catch(function(){})}catch(err){}
     okBox.hidden=false;form.reset();form.querySelectorAll('[data-touched]').forEach(function(el){el.removeAttribute('data-touched')});
     sendBtn.disabled=true;sendBtn.textContent='Request sent';
     setTimeout(function(){sendBtn.disabled=false;sendBtn.textContent='Request a demo'},8000);
