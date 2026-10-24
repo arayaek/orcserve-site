@@ -75,13 +75,13 @@ header.site{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--
 
 /* hero */
 .hero{position:relative;color:#fff;background:var(--navy-3);overflow:hidden;isolation:isolate}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;z-index:-2}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
-  linear-gradient(90deg,rgba(6,27,51,.95) 0%,rgba(6,27,51,.82) 40%,rgba(6,27,51,.28) 74%,rgba(6,27,51,.05) 100%),
-  linear-gradient(0deg,rgba(6,27,51,.85) 0%,rgba(6,27,51,0) 40%)}
+  linear-gradient(90deg,rgba(6,27,51,.66) 0%,rgba(6,27,51,.46) 44%,rgba(6,27,51,.12) 70%,rgba(6,27,51,0) 88%),
+  linear-gradient(0deg,rgba(6,27,51,.74) 0%,rgba(6,27,51,.08) 46%,rgba(6,27,51,0) 72%)}
 .hero-in{min-height:min(82vh,720px);display:grid;grid-template-columns:minmax(0,1fr) auto;align-content:center;column-gap:24px;padding-block:clamp(56px,7vw,92px);position:relative}
 .hero-in>.hero-copy{grid-column:1;grid-row:1}
-.hero-copy{max-width:660px}
+.hero-copy{max-width:660px;text-shadow:0 2px 22px rgba(4,16,30,.55)}
 .hero .eyebrow{color:var(--green)}
 .hero h1{color:#fff;font-size:clamp(38px,5.6vw,72px);font-weight:800;letter-spacing:-.035em;margin-top:18px}
 .hero h1 em{font-style:normal;background:linear-gradient(100deg,#6FA6FF,var(--green) 55%,var(--lime));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -263,7 +263,6 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
 <section class="hero">
   <img class="hero-img" src="assets/hero-worker.jpg" alt="" aria-hidden="true">
   <div class="wrap hero-in">
-    <div class="tag">LIVE IN WEEKS.<br>NOT YEARS.</div>
     <div class="hero-copy">
       <div class="eyebrow">Enterprise systems &harr; ArcGIS Field Maps</div>
       <h1>Put every work order <em>on the map</em> — and every field update back in your system.</h1>
@@ -276,14 +275,6 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     </div>
   </div>
 </section>
-
-<!-- STATS -->
-<div class="stats" aria-label="Key facts">
-  <div class="stat st1"><span class="n">2-way</span><span class="l">Work flows out to the map; field updates flow back to your system</span></div>
-  <div class="stat st2"><span class="n">Weeks</span><span class="l">To a first workflow live — not quarters or years</span></div>
-  <div class="stat st3"><span class="n">100%</span><span class="l">Your system of record stays the single source of truth</span></div>
-  <div class="stat st4"><span class="n">0</span><span class="l">Rip-and-replace — configured on your stack, in your tenant</span></div>
-</div>
 
 <!-- THE GAP -->
 <section class="sec" id="gap">
@@ -298,18 +289,21 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
         <p class="muted">Every option trades away either your systems, your budget, or your sanity — and none of them keep the office and the field truly in sync.</p>
       </div>
       <div class="diagram">
-        <svg viewBox="0 0 520 300" role="img" aria-label="A system of record and a map, with a gap between them">
-          <rect x="18" y="96" width="150" height="108" rx="14" fill="#0B2F5C"/>
-          <text x="38" y="132" fill="#9FC0FF" font-family="JetBrains Mono,monospace" font-size="11" letter-spacing="1">SYSTEM OF RECORD</text>
-          <text x="38" y="158" fill="#fff" font-family="Sora,sans-serif" font-weight="700" font-size="17">311 · CRM</text>
-          <text x="38" y="180" fill="#fff" font-family="Sora,sans-serif" font-weight="700" font-size="17">ERP · WO</text>
-          <rect x="352" y="96" width="150" height="108" rx="14" fill="#E9F3EC" stroke="#CBE6D5"/>
-          <g stroke="#22C55E" stroke-width="1.4" opacity=".5"><line x1="392" y1="110" x2="392" y2="190"/><line x1="432" y1="110" x2="432" y2="190"/><line x1="472" y1="110" x2="472" y2="190"/><line x1="366" y1="136" x2="492" y2="136"/><line x1="366" y1="164" x2="492" y2="164"/></g>
-          <g transform="translate(432,150)" fill="#16A34A"><path d="M0 0C-4 -7 -7.5 -10 -7.5 -15.5A7.5 7.5 0 1 1 7.5 -15.5C7.5 -10 4 -7 0 0Z"/><circle cx="0" cy="-15.5" r="3" fill="#E9F3EC"/></g>
-          <text x="427" y="214" fill="#0B2F5C" font-family="Sora,sans-serif" font-weight="700" font-size="13">ArcGIS</text>
-          <path d="M176 150 H 344" stroke="#C0637A" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
-          <text x="260" y="140" text-anchor="middle" fill="#B04B66" font-family="JetBrains Mono,monospace" font-size="12" font-weight="600">the gap</text>
-          <text x="260" y="176" text-anchor="middle" fill="#8aa0b5" font-family="Inter,sans-serif" font-size="11">crossed by hand today</text>
+        <svg viewBox="0 0 520 260" role="img" aria-label="A system of record on the left and ArcGIS Field Maps on the right, with a gap between them">
+          <!-- left: system of record -->
+          <rect x="24" y="68" width="168" height="124" rx="14" fill="#0B2F5C"/>
+          <text x="44" y="100" fill="#9FC0FF" font-family="JetBrains Mono,monospace" font-size="10.5" letter-spacing="1.4">SYSTEM OF RECORD</text>
+          <text x="44" y="132" fill="#fff" font-family="Sora,sans-serif" font-weight="700" font-size="18">311 · CRM</text>
+          <text x="44" y="158" fill="#fff" font-family="Sora,sans-serif" font-weight="700" font-size="18">ERP · WO</text>
+          <!-- right: ArcGIS / Field Maps (label inside, consistent with left) -->
+          <rect x="328" y="68" width="168" height="124" rx="14" fill="#EAF4EE" stroke="#CBE6D5"/>
+          <text x="348" y="100" fill="#16A34A" font-family="JetBrains Mono,monospace" font-size="10.5" letter-spacing="1.4">ARCGIS · FIELD MAPS</text>
+          <g stroke="#9DD6B4" stroke-width="1.3"><line x1="348" y1="150" x2="476" y2="150"/><line x1="384" y1="118" x2="384" y2="182"/><line x1="420" y1="118" x2="420" y2="182"/><line x1="456" y1="118" x2="456" y2="182"/></g>
+          <g transform="translate(420,160)" fill="#16A34A"><path d="M0 0C-4 -7 -7.5 -10 -7.5 -15.5A7.5 7.5 0 1 1 7.5 -15.5C7.5 -10 4 -7 0 0Z"/><circle cx="0" cy="-15.5" r="3" fill="#EAF4EE"/></g>
+          <!-- gap -->
+          <path d="M200 130 H 320" stroke="#C0637A" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+          <text x="260" y="120" text-anchor="middle" fill="#B04B66" font-family="JetBrains Mono,monospace" font-size="12" font-weight="600">the gap</text>
+          <text x="260" y="150" text-anchor="middle" fill="#8aa0b5" font-family="Inter,sans-serif" font-size="11">costly, rigid workarounds</text>
         </svg>
       </div>
     </div>
@@ -451,8 +445,8 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
   <div class="wrap contact">
     <div class="info">
       <div><div class="eyebrow">Contact</div><h2>Let's put your work on the map.</h2></div>
-      <p style="color:var(--muted)">Tell us the system you run and the workflow you'd start with. You'll hear back from the person who'd actually do the work — not a call center.</p>
-      <div><h4>What to expect</h4><p>A short call, then a demo against a sample of your own request types. No rip-and-replace, no long procurement to see it work.</p></div>
+      <p style="color:var(--muted)">Tell us the system you run and the workflow you'd start with, and we'll put together a demo tailored to how OrcServe fits your operation.</p>
+      <div><h4>What to expect</h4><p>Based on what you share, we prepare a demo that walks through your workflow and shows how OrcServe fits and serves your needs — a starting point for the conversation.</p></div>
       <div><h4>Based in</h4><p>McLean, Virginia · working with agencies nationwide</p></div>
     </div>
     <form id="demo-form" novalidate>
@@ -460,9 +454,10 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <label><span>Work email <span class="req">*</span></span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
       <label>Agency / organization<input id="f-co" name="organisation" autocomplete="organization"></label>
       <label>Your system of record<select id="f-sys" name="system"><option>311 / CRM</option><option>Cityworks</option><option>Salesforce</option><option>SAP / ERP</option><option>Work-management / CMMS</option><option>Permitting</option><option>Other / not sure</option></select></label>
+      <label>Field / integration software in use <span style="color:var(--muted);font-weight:500">(optional)</span><select id="f-tools" name="tools"><option value="">— none / not sure —</option><option>Esri Field Maps</option><option>Cityworks</option><option>Rubicon / Routeware</option><option>VertiGIS</option><option>Cartegraph</option><option>Accela</option><option>Salesforce</option><option>FME (Safe Software)</option><option>Custom in-house app</option><option>Other (describe below)</option></select></label>
       <label>Role<input id="f-role" name="role" autocomplete="organization-title"></label>
       <label>Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
-      <label class="full"><span>What would you start with? <span class="req">*</span></span><textarea id="f-msg" name="message" required placeholder="e.g. potholes and illegal dumping from our 311 system, worked in Field Maps"></textarea></label>
+      <label class="full"><span>Tell us about your workflow <span class="req">*</span></span><textarea id="f-msg" name="message" required placeholder="Share as much or as little as you like — even a sentence helps us tailor the demo. We'll go deeper on the call."></textarea></label>
       <div class="hp" aria-hidden="true"><label>Leave this empty<input id="f-hp" name="_honey" tabindex="-1" autocomplete="off"></label></div>
       <button class="btn green full" type="submit" id="f-send" style="justify-self:start">Request a demo</button>
       <div class="sent" id="sent" role="status" hidden>Thanks — your request is in. We'll get back to you shortly.</div>
@@ -507,7 +502,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     ['f-name','f-email','f-msg'].forEach(function(id){document.getElementById(id).setAttribute('data-touched','1')});
     if(!form.checkValidity()){errBox.textContent='Please add your name, a valid work email, and what you’d start with.';errBox.hidden=false;return}
     if(v('f-hp')){okBox.hidden=false;form.reset();return}
-    var data={name:v('f-name'),email:v('f-email'),organisation:v('f-co'),system:v('f-sys'),role:v('f-role'),phone:v('f-phone'),message:v('f-msg'),
+    var data={name:v('f-name'),email:v('f-email'),organisation:v('f-co'),system:v('f-sys'),tools:v('f-tools'),role:v('f-role'),phone:v('f-phone'),message:v('f-msg'),
       _subject:'ORCSERVE demo request: '+v('f-name')+(v('f-co')?' ('+v('f-co')+')':''),_template:'table',_captcha:'false',_replyto:v('f-email')};
     if(FORM_ID && FORM_ID.indexOf('REPLACE')<0){
       var fd=new FormData();Object.keys(data).forEach(function(k){fd.append(k,data[k])});
