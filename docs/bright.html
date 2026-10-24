@@ -124,6 +124,15 @@ figure{margin:0}
 .two .muted{color:var(--muted)}
 .diagram{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:clamp(16px,2.4vw,26px);box-shadow:var(--shadow)}
 .diagram svg{width:100%;height:auto;display:block}
+.approaches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.appr{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--line);border-radius:var(--r);padding:24px}
+.appr .t{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.appr h3{font-size:1.16rem;margin:10px 0 8px}
+.appr p{color:var(--muted);font-size:14.5px;margin:0}
+.appr.a1{border-top-color:var(--amber)}.appr.a2{border-top-color:var(--blue)}.appr.a3{border-top-color:var(--violet)}
+.appr-close{margin-top:28px;font:600 clamp(18px,2.1vw,23px)/1.35 var(--display);color:var(--heading);letter-spacing:-.01em;max-width:44em}
+.appr-close .g{color:var(--green-2)}
+@media(max-width:860px){.approaches{grid-template-columns:1fr}}
 
 /* loop steps */
 .loop{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -281,12 +290,12 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
   <div class="wrap">
     <div class="head">
       <div><div class="eyebrow">The problem</div><h2>Your work lives in a database. Your crews live on a map.</h2></div>
-      <p>The system of record — your CRM, ERP, 311, work-management or permitting platform — knows every job. ArcGIS knows every place. Between them sits a gap most agencies still cross by hand.</p>
+      <p>The system of record — your 311, CRM, ERP, work-management or permitting platform — knows every job. ArcGIS knows every place. Between them sits a gap, and closing it is where agencies quietly lose time and money.</p>
     </div>
     <div class="two">
       <div>
-        <p class="lead">Spreadsheets and re-keying. A rip-and-replace field app that fights your workflows. Or a brittle custom integration only one developer understands.</p>
-        <p class="muted">Every option trades away either your systems, your budget, or your sanity — and none of them keep the office and the field truly in sync.</p>
+        <p class="lead">To put work on the map today, most agencies bridge this gap one of three ways — and each one costs them.</p>
+        <p class="muted">Meanwhile the office and the field stay out of sync, paid for in time, budget, or flexibility.</p>
       </div>
       <div class="diagram">
         <svg viewBox="0 0 520 260" role="img" aria-label="A system of record on the left and ArcGIS Field Maps on the right, with a gap between them">
@@ -307,6 +316,12 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
         </svg>
       </div>
     </div>
+    <div class="approaches">
+      <div class="appr a1"><div class="t">Approach 1 · Manual</div><h3>Spreadsheets &amp; re-keying</h3><p>Crews enter the same job into 311, a spreadsheet and a map by hand. It's slow and error-prone, and updates get lost, duplicated, or logged days late.</p></div>
+      <div class="appr a2"><div class="t">Approach 2 · Off-the-shelf</div><h3>A COTS all-in-one platform</h3><p>Expensive, and it brings its own fixed process — so you reshape your operation to fit the software, and still can't bend it to the unique way each workflow actually runs.</p></div>
+      <div class="appr a3"><div class="t">Approach 3 · Custom build</div><h3>A one-off in-house integration</h3><p>Costly and slow to build, brittle when a connected system changes, and expensive to maintain — often living in one developer's head.</p></div>
+    </div>
+    <p class="appr-close">Each path trades away your time, your budget, or your flexibility. <span class="g">ORCSERVE takes a different one</span> — it connects the systems you already run to ArcGIS, configured to your workflows instead of forcing you onto someone else's. Here's how.</p>
   </div>
 </section>
 
