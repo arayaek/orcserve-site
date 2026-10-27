@@ -172,7 +172,7 @@ figure{margin:0}
 .dc-legend .wc,.bar .wc,.brk .wc{background:var(--green-2)}
 .dc-legend .nf,.bar .nf,.brk .nf{background:var(--amber)}
 .dc-legend .ot,.bar .ot,.brk .ot{background:#b9c4cf}
-.bar{display:grid;grid-template-columns:92px 1fr 40px;align-items:center;gap:10px;margin:7px 0}
+.bar{display:grid;grid-template-columns:118px 1fr 42px;align-items:center;gap:10px;margin:6px 0}
 .bar .nm{font:500 12px var(--body);color:var(--ink);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bar .track{height:14px;border-radius:4px;background:var(--soft);overflow:hidden}
 .bar .fill{display:flex;height:100%}
@@ -188,6 +188,25 @@ figure{margin:0}
 .insight span{display:block;font:500 12.5px var(--body);color:var(--muted);margin-top:4px}
 .dash-cap{font:500 12px var(--body);color:var(--muted);margin-top:12px}
 @media(max-width:820px){.dash-kpis{grid-template-columns:1fr 1fr}.dash-body{grid-template-columns:1fr}}
+.dash-kicker{font:700 10px var(--body);letter-spacing:.14em;text-transform:uppercase;color:#9FC0FF;margin-bottom:4px}
+.dash-tabs{display:flex;gap:4px;background:rgba(255,255,255,.08);border-radius:8px;padding:3px;flex:none}
+.dash-tabs span{font:600 12px var(--body);padding:6px 12px;border-radius:6px;color:#cdddf0;white-space:nowrap}
+.dash-tabs span.on{background:#fff;color:var(--navy)}
+.dash-filterbar{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;padding:12px 18px;border-bottom:1px solid var(--line)}
+.fg{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.fl{font:700 10px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.dash-filterbar .f{font:600 11.5px var(--body);padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:var(--surface);white-space:nowrap}
+.dash-filterbar .f.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.sel{font:600 12px var(--body);padding:6px 12px;border:1px solid var(--line);border-radius:8px;color:var(--ink);background:var(--surface)}
+.tog{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.tog b{font:600 12px var(--body);padding:6px 12px;color:var(--ink);background:var(--surface)}
+.tog b.on{background:var(--green);color:#04160f}
+.kpi.k-ink{background:var(--navy)}
+.kpi.k-ink .l{color:#9FC0FF}.kpi.k-ink .n{color:#fff}.kpi.k-ink .s{color:#cdddf0}
+.dc-title span{display:block;font:500 11.5px var(--body);color:var(--muted);margin-top:3px}
+.dc-foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font:500 11.5px var(--body);color:var(--muted)}
+.brk .warn{grid-column:1/-1;font:600 11px var(--body);color:#C0633F;margin-top:2px}
+.brk .bt .rd{background:#E0794F}
 .diagram{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:clamp(16px,2.4vw,26px);box-shadow:var(--shadow)}
 .diagram svg{width:100%;height:auto;display:block}
 .approaches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
@@ -486,37 +505,53 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     </div>
     <div class="dash">
       <div class="dash-top">
-        <div class="dash-title"><span class="dot"></span>Illegal Dumping · Closure History</div>
-        <div class="dash-filters"><span class="f active">Last Month</span><span class="f">All wards</span><span class="f">By crew</span></div>
+        <div>
+          <div class="dash-kicker">DPW · Solid Waste Management</div>
+          <div class="dash-title"><span class="dot"></span>Illegal Dumping · Closure History</div>
+        </div>
+        <div class="dash-tabs"><span>Main Dashboard</span><span class="on">Closure History</span></div>
+      </div>
+      <div class="dash-filterbar">
+        <div class="fg"><span class="fl">Closed</span><span class="f">Today</span><span class="f">Yesterday</span><span class="f">This Week</span><span class="f">Last Week</span><span class="f">This Month</span><span class="f on">Last Month</span><span class="f">Custom…</span></div>
+        <div class="fg"><span class="fl">Ward</span><span class="sel">All wards ▾</span></div>
+        <div class="fg"><span class="fl">Closed by</span><span class="tog"><b class="on">Crew</b><b>System</b><b>All</b></span></div>
       </div>
       <div class="dash-kpis">
-        <div class="kpi"><span class="l">Total closed</span><span class="n">5,646</span><span class="s">crew + system + unassigned</span></div>
+        <div class="kpi k-ink"><span class="l">Total closed</span><span class="n">5,646</span><span class="s">Crew + System + Unassigned</span></div>
         <div class="kpi"><span class="l">Closed by crew</span><span class="n g">4,386</span><span class="s">77.7% · 14 staff</span></div>
-        <div class="kpi"><span class="l">Within SLA</span><span class="n g">92%</span><span class="s">closed on time</span></div>
-        <div class="kpi k-warn"><span class="l">Nothing-found rate</span><span class="n a">≈25%</span><span class="s">1 in 4 visits</span></div>
+        <div class="kpi"><span class="l">Closed by system / 311</span><span class="n">963</span><span class="s">17.1% · 311, leaf2021</span></div>
+        <div class="kpi k-warn"><span class="l">Unassigned (no closer)</span><span class="n a">297</span><span class="s">5.3% · data-quality follow-up</span></div>
       </div>
       <div class="dash-body">
         <div class="dash-chart">
-          <div class="dc-title">SRs closed by crew</div>
+          <div class="dc-title">SRs closed by employee<span>Sorted high → low · bars split by how the SR was closed</span></div>
           <div class="dc-legend"><span><i class="wc"></i>Work Completed</span><span><i class="nf"></i>Nothing Found</span><span><i class="ot"></i>Other</span></div>
-          <div class="bar"><span class="nm">M. Rivera</span><span class="track"><span class="fill" style="width:92%"><i class="wc" style="width:70%"></i><i class="nf" style="width:27%"></i></span></span><span class="v">759</span></div>
-          <div class="bar"><span class="nm">A. Johnson</span><span class="track"><span class="fill" style="width:88%"><i class="wc" style="width:62%"></i><i class="nf" style="width:34%"></i></span></span><span class="v">730</span></div>
-          <div class="bar"><span class="nm">D. Carter</span><span class="track"><span class="fill" style="width:76%"><i class="wc" style="width:72%"></i><i class="nf" style="width:24%"></i></span></span><span class="v">626</span></div>
-          <div class="bar"><span class="nm">S. Nguyen</span><span class="track"><span class="fill" style="width:70%"><i class="wc" style="width:66%"></i><i class="nf" style="width:28%"></i></span></span><span class="v">579</span></div>
-          <div class="bar"><span class="nm">K. Brooks</span><span class="track"><span class="fill" style="width:64%"><i class="wc" style="width:60%"></i><i class="nf" style="width:34%"></i></span></span><span class="v">531</span></div>
-          <div class="bar"><span class="nm">L. Ortiz</span><span class="track"><span class="fill" style="width:61%"><i class="wc" style="width:74%"></i><i class="nf" style="width:22%"></i></span></span><span class="v">505</span></div>
-          <div class="bar"><span class="nm">J. Pope</span><span class="track"><span class="fill" style="width:24%"><i class="wc" style="width:80%"></i><i class="nf" style="width:16%"></i></span></span><span class="v">199</span></div>
-          <div class="bar"><span class="nm">T. Hawkins</span><span class="track"><span class="fill" style="width:20%"><i class="wc" style="width:78%"></i><i class="nf" style="width:18%"></i></span></span><span class="v">161</span></div>
+          <div class="bar"><span class="nm">Rashid Burgess</span><span class="track"><span class="fill" style="width:94%"><i class="wc" style="width:68%"></i><i class="nf" style="width:29%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">759</span></div>
+          <div class="bar"><span class="nm">Naquia Dent</span><span class="track"><span class="fill" style="width:90%"><i class="wc" style="width:57%"></i><i class="nf" style="width:40%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">730</span></div>
+          <div class="bar"><span class="nm">Kenneth Melvin</span><span class="track"><span class="fill" style="width:78%"><i class="wc" style="width:71%"></i><i class="nf" style="width:26%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">626</span></div>
+          <div class="bar"><span class="nm">Thomas Williams</span><span class="track"><span class="fill" style="width:72%"><i class="wc" style="width:63%"></i><i class="nf" style="width:34%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">579</span></div>
+          <div class="bar"><span class="nm">Kevin Maiden</span><span class="track"><span class="fill" style="width:66%"><i class="wc" style="width:65%"></i><i class="nf" style="width:32%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">531</span></div>
+          <div class="bar"><span class="nm">Gerald Edwards</span><span class="track"><span class="fill" style="width:63%"><i class="wc" style="width:59%"></i><i class="nf" style="width:38%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">505</span></div>
+          <div class="bar"><span class="nm">Jabbar Pope</span><span class="track"><span class="fill" style="width:25%"><i class="wc" style="width:84%"></i><i class="nf" style="width:14%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">199</span></div>
+          <div class="bar"><span class="nm">Darrell Hawkins</span><span class="track"><span class="fill" style="width:20%"><i class="wc" style="width:74%"></i><i class="nf" style="width:24%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">161</span></div>
+          <div class="bar"><span class="nm">Kenneth Willis</span><span class="track"><span class="fill" style="width:15%"><i class="wc" style="width:78%"></i><i class="nf" style="width:20%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">123</span></div>
+          <div class="bar"><span class="nm">Eddie Sanders III</span><span class="track"><span class="fill" style="width:9%"><i class="wc" style="width:82%"></i><i class="nf" style="width:16%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">72</span></div>
+          <div class="bar"><span class="nm">Denita Taylor</span><span class="track"><span class="fill" style="width:8%"><i class="wc" style="width:76%"></i><i class="nf" style="width:22%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">66</span></div>
+          <div class="bar"><span class="nm">Lawrence Jacobs</span><span class="track"><span class="fill" style="width:3%"><i class="wc" style="width:88%"></i><i class="nf" style="width:12%"></i></span></span><span class="v">24</span></div>
+          <div class="bar"><span class="nm">Aceba Broadus</span><span class="track"><span class="fill" style="width:1.5%"><i class="wc" style="width:100%"></i></span></span><span class="v">7</span></div>
+          <div class="bar"><span class="nm">Araya Kebede</span><span class="track"><span class="fill" style="width:1%"><i class="wc" style="width:100%"></i></span></span><span class="v">4</span></div>
+          <div class="dc-foot">Totals from current dashboard. Per-person split is illustrative (wire to ClosureType).</div>
         </div>
         <div class="dash-side">
-          <div class="dc-title">How SRs were closed</div>
-          <div class="dc-legend" style="margin-bottom:12px"></div>
+          <div class="dc-title">How SRs were closed<span>All closures in range</span></div>
           <div class="brk"><span class="bl">Work Completed</span><span class="bv">3.2k</span><span class="bt"><i class="wc" style="width:82%"></i></span></div>
           <div class="brk"><span class="bl">Nothing Found</span><span class="bv">1.1k</span><span class="bt"><i class="nf" style="width:30%"></i></span></div>
           <div class="brk"><span class="bl">Externally Closed (311)</span><span class="bv">938</span><span class="bt"><i class="ot" style="width:26%"></i></span></div>
-          <div class="brk"><span class="bl">Area Investigated</span><span class="bv">210</span><span class="bt"><i class="wc" style="width:9%"></i></span></div>
-          <div class="brk"><span class="bl">Private Property</span><span class="bv">90</span><span class="bt"><i class="ot" style="width:4%"></i></span></div>
-          <div class="insight">Nothing-found rate (crew) <b>≈25%</b><span>About 1 in 4 truck visits finds nothing to pick up.</span></div>
+          <div class="brk"><span class="bl">Area Investigated</span><span class="bv">50</span><span class="bt"><i class="rd" style="width:4%"></i></span><span class="warn">Open status in closed data, check filter</span></div>
+          <div class="brk"><span class="bl">Private Property</span><span class="bv">18</span><span class="bt"><i class="ot" style="width:3%"></i></span></div>
+          <div class="brk"><span class="bl">Work in Progress</span><span class="bv">11</span><span class="bt"><i class="rd" style="width:3%"></i></span><span class="warn">Open status in closed data, check filter</span></div>
+          <div class="brk"><span class="bl">Externally Canceled</span><span class="bv">1</span><span class="bt"><i class="ot" style="width:1%"></i></span></div>
+          <div class="insight">Nothing Found rate (crew) <b>≈25%</b><span>About 1 in 4 truck visits finds nothing to pick up.</span></div>
         </div>
       </div>
     </div>
