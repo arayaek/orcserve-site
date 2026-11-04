@@ -59,6 +59,8 @@ header.site{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px;position:relative}
 .brand{display:flex;align-items:center;gap:9px}
 .brand .mark{width:34px;height:34px;flex:none;color:var(--heading);object-fit:contain;display:block}
+.brand .logo-full{height:34px;width:auto;display:block}
+.foot .brand .logo-full{height:30px}
 .brand b{font:800 21px/1 var(--display);letter-spacing:-.01em;color:var(--heading)}
 .brand b span{color:var(--green-2)}
 .links{display:flex;align-items:center;gap:2px}
@@ -367,8 +369,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
 <header class="site">
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="ORCSERVE home">
-      <img class="mark" src="orcserve-icon.png" alt="" width="34" height="34">
-      <b>ORC<span>SERVE</span></b>
+      <img class="logo-full" src="orcserve-logo-tight.png" alt="ORCSERVE">
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
     <nav class="links" id="navLinks">
@@ -773,7 +774,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
   <div class="wrap">
     <div class="foot">
       <div style="max-width:320px;display:flex;flex-direction:column;gap:14px">
-        <span class="brand"><img class="mark" src="orcserve-icon-dark.png" alt="" width="34" height="34"><b>ORC<span style="color:var(--green)">SERVE</span></b></span>
+        <span class="brand"><img class="logo-full" src="orcserve-logo-dark-tight.png" alt="ORCSERVE"></span>
         <p>Your systems run the business. ArcGIS runs the field. ORCSERVE keeps them in sync.</p>
       </div>
       <div class="cols">
