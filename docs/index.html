@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ORCSERVE: the two-way sync layer between your systems and ArcGIS</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="orcserve-favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="orcserve-favicon-180.png">
 <meta name="description" content="ORCSERVE puts every work order on the ArcGIS map and syncs every field update back to your system of record. Configured, not custom-coded. Live in weeks, not years.">
 <meta property="og:title" content="ORCSERVE: systems of record, meet the field">
 <meta property="og:description" content="The two-way sync layer between the enterprise systems you run and ArcGIS Field Maps. Configured, not custom-coded.">
@@ -57,7 +58,7 @@ p{margin:0}
 header.site{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px;position:relative}
 .brand{display:flex;align-items:center;gap:9px}
-.brand .mark{width:34px;height:34px;flex:none;color:var(--heading)}
+.brand .mark{width:34px;height:34px;flex:none;color:var(--heading);object-fit:contain;display:block}
 .brand b{font:800 21px/1 var(--display);letter-spacing:-.01em;color:var(--heading)}
 .brand b span{color:var(--green-2)}
 .links{display:flex;align-items:center;gap:2px}
@@ -366,7 +367,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
 <header class="site">
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="ORCSERVE home">
-      <svg class="mark"><use href="#pin"/></svg>
+      <img class="mark" src="orcserve-icon.png" alt="" width="34" height="34">
       <b>ORC<span>SERVE</span></b>
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
@@ -772,7 +773,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
   <div class="wrap">
     <div class="foot">
       <div style="max-width:320px;display:flex;flex-direction:column;gap:14px">
-        <span class="brand"><svg class="mark"><use href="#pin"/></svg><b>ORC<span style="color:var(--green)">SERVE</span></b></span>
+        <span class="brand"><img class="mark" src="orcserve-icon-dark.png" alt="" width="34" height="34"><b>ORC<span style="color:var(--green)">SERVE</span></b></span>
         <p>Your systems run the business. ArcGIS runs the field. ORCSERVE keeps them in sync.</p>
       </div>
       <div class="cols">
