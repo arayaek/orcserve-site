@@ -1,6 +1,6 @@
-# ORCSERVE marketing site
+# Orcserve marketing site
 
-A small, maintainable static site for ORCSERVE. Pages are generated from one place so the
+A small, maintainable static site for Orcserve. Pages are generated from one place so the
 chrome (header, footer, `<head>`) and the **brand name** stay consistent everywhere.
 
 ## Build
@@ -28,7 +28,7 @@ orcserve-site/
 
 ## How to change things
 
-- **Rename the product** (e.g. ORCSERVE ↔ ORCHSERVE): edit the single `BRAND` dict at the
+- **Rename the product** (e.g. Orcserve ↔ ORCHSERVE): edit the single `BRAND` dict at the
   top of `build.py`, then rebuild. Nothing else needs to change.
 - **Copy / page content:** edit the page functions in `build.py` (`home()`, `platform()`, …).
 - **Look and feel:** edit the CSS custom properties in `:root` at the top of `styles.css`
