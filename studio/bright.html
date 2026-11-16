@@ -6,7 +6,7 @@
 <title>Orcserve: the two-way sync layer between your systems and ArcGIS</title>
 <link rel="icon" type="image/png" sizes="32x32" href="orcserve-favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="orcserve-favicon-180.png">
-<meta name="description" content="Orcserve puts every work order on the ArcGIS map and syncs every field update back to your system of record. Configured, not custom-coded. Live in weeks, not years.">
+<meta name="description" content="Orcserve puts every work order on the ArcGIS map and syncs every field update back to your system of record. Configured, not custom-coded, on the Esri platform you already own.">
 <meta property="og:title" content="Orcserve: systems of record, meet the field">
 <meta property="og:description" content="The two-way sync layer between the enterprise systems you run and ArcGIS Field Maps. Configured, not custom-coded.">
 <meta property="og:type" content="website">
@@ -376,10 +376,10 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <a href="#how">How it works</a>
       <a href="#work">See it work</a>
       <a href="#more">Capabilities</a>
-      <a href="#reporting">Reporting</a>
-      <a href="#uses">Use cases</a>
+      <a href="#tech">Technology</a>
       <a href="#cases">Case studies</a>
       <a href="#why">Why Orcserve</a>
+      <a href="#about">About</a>
       <a class="cta" href="#contact">Request a demo</a>
     </nav>
   </div>
@@ -399,7 +399,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
         <a class="btn green" href="#contact">Request a demo →</a>
         <a class="btn outline" href="#work">See it work</a>
       </div>
-      <div class="live"><i></i>Working today · proven two-way sync against ArcGIS Online</div>
+      <div class="live"><i></i>Working today · live two-way sync against ArcGIS Online</div>
     </div>
   </div>
 </section>
@@ -471,7 +471,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <div class="term">
         <div class="top"><i></i><i></i><i></i><span>orcserve · live sync run</span></div>
         <div class="body">
-<span class="d">$ orcserve sync --deployment fairfax-311</span><br>
+<span class="d">$ orcserve sync --deployment city-311</span><br>
 <span class="d">16:27:13</span> health &nbsp;source:<span class="ok">ok</span> &nbsp;arcgis:<span class="ok">ok</span> &nbsp;db:<span class="ok">ok</span><br>
 <span class="d">16:27:13</span> reading source for new &amp; changed work…<br>
 <span class="cr">&nbsp;<b>+</b> created SR-1001 &nbsp;pothole &nbsp;<span class="d">status=new</span></span><br>
@@ -521,8 +521,27 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <span class="chip">Same data powers <b>ArcGIS Dashboards</b></span>
       <span class="chip">Works <b>offline</b> in Field Maps</span>
       <span class="chip"><b>Experience Builder</b> &amp; Survey123</span>
-      <span class="chip">No new platform to buy</span>
+      <span class="chip">Runs on the <b>Esri you already own</b></span>
     </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY & INTEGRATION -->
+<section class="sec soft" id="tech">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Technology &amp; integration</div><h2>Built on open standards, configured to your workflows.</h2></div>
+      <p>Orcserve is a configurable integration platform, not a one-off script. It connects your systems of record to ArcGIS over published APIs, with the safeguards an enterprise integration needs.</p>
+    </div>
+    <div class="princ">
+      <div class="p"><h3>Open, documented APIs</h3><p>Reads and writes through standards like Open311 and the ArcGIS REST API, not brittle screen-scraping. Connectors are configured per source system.</p></div>
+      <div class="p"><h3>Authenticated &amp; least-privilege</h3><p>Named-user and token authentication to each system, scoped to only the records and fields you approve. Credentials stay in your environment.</p></div>
+      <div class="p"><h3>Reliable two-way sync</h3><p>Incremental, idempotent syncs with retries and loop prevention, so the same change is never double-applied and the system of record stays authoritative.</p></div>
+      <div class="p"><h3>Full audit trail</h3><p>Every create, update and write-back is logged with timestamps and outcomes, so you can see exactly what synced, when, and why.</p></div>
+      <div class="p"><h3>Field-ready data &amp; photos</h3><p>Custom fields and source images travel to the map feature — including converting phone photo formats so they display in Field Maps and reporting.</p></div>
+      <div class="p"><h3>Customer-hosted deployment</h3><p>Runs on-premises or in your own Azure or AWS tenant. Your operational data and logs stay in an environment you control.</p></div>
+    </div>
+    <p class="dash-cap" style="margin-top:28px">Integrations are configured to each agency's systems and approvals; available connectors and capabilities depend on your platforms and Esri licensing.</p>
   </div>
 </section>
 
@@ -536,7 +555,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     <div class="dash">
       <div class="dash-top">
         <div>
-          <div class="dash-kicker">DPW · Solid Waste Management</div>
+          <div class="dash-kicker">Sample data · Solid Waste Management</div>
           <div class="dash-title"><span class="dot"></span>Illegal Dumping Closure History</div>
         </div>
         <div class="dash-tabs"><span>Main Dashboard</span><span class="on">Closure History</span></div>
@@ -549,28 +568,28 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <div class="dash-kpis">
         <div class="kpi k-ink"><span class="l">Total closed</span><span class="n">5,646</span><span class="s">Crew + System + Unassigned</span></div>
         <div class="kpi"><span class="l">Closed by crew</span><span class="n g">4,386</span><span class="s">77.7% · 14 staff</span></div>
-        <div class="kpi"><span class="l">Closed by system / 311</span><span class="n">963</span><span class="s">17.1% · 311, leaf2021</span></div>
+        <div class="kpi"><span class="l">Closed by system / 311</span><span class="n">963</span><span class="s">17.1% · 311 &amp; batch jobs</span></div>
         <div class="kpi k-warn"><span class="l">Unassigned (no closer)</span><span class="n a">297</span><span class="s">5.3% · data-quality follow-up</span></div>
       </div>
       <div class="dash-body">
         <div class="dash-chart">
           <div class="dc-title">SRs closed by employee<span>Sorted high → low · bars split by how the SR was closed</span></div>
           <div class="dc-legend"><span><i class="wc"></i>Work Completed</span><span><i class="nf"></i>Nothing Found</span><span><i class="ot"></i>Other</span></div>
-          <div class="bar"><span class="nm">Rashid Burgess</span><span class="track"><span class="fill" style="width:94%"><i class="wc" style="width:68%"></i><i class="nf" style="width:29%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">759</span></div>
-          <div class="bar"><span class="nm">Naquia Dent</span><span class="track"><span class="fill" style="width:90%"><i class="wc" style="width:57%"></i><i class="nf" style="width:40%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">730</span></div>
-          <div class="bar"><span class="nm">Kenneth Melvin</span><span class="track"><span class="fill" style="width:78%"><i class="wc" style="width:71%"></i><i class="nf" style="width:26%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">626</span></div>
-          <div class="bar"><span class="nm">Thomas Williams</span><span class="track"><span class="fill" style="width:72%"><i class="wc" style="width:63%"></i><i class="nf" style="width:34%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">579</span></div>
-          <div class="bar"><span class="nm">Kevin Maiden</span><span class="track"><span class="fill" style="width:66%"><i class="wc" style="width:65%"></i><i class="nf" style="width:32%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">531</span></div>
-          <div class="bar"><span class="nm">Gerald Edwards</span><span class="track"><span class="fill" style="width:63%"><i class="wc" style="width:59%"></i><i class="nf" style="width:38%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">505</span></div>
-          <div class="bar"><span class="nm">Jabbar Pope</span><span class="track"><span class="fill" style="width:25%"><i class="wc" style="width:84%"></i><i class="nf" style="width:14%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">199</span></div>
-          <div class="bar"><span class="nm">Darrell Hawkins</span><span class="track"><span class="fill" style="width:20%"><i class="wc" style="width:74%"></i><i class="nf" style="width:24%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">161</span></div>
-          <div class="bar"><span class="nm">Kenneth Willis</span><span class="track"><span class="fill" style="width:15%"><i class="wc" style="width:78%"></i><i class="nf" style="width:20%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">123</span></div>
-          <div class="bar"><span class="nm">Eddie Sanders III</span><span class="track"><span class="fill" style="width:9%"><i class="wc" style="width:82%"></i><i class="nf" style="width:16%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">72</span></div>
-          <div class="bar"><span class="nm">Denita Taylor</span><span class="track"><span class="fill" style="width:8%"><i class="wc" style="width:76%"></i><i class="nf" style="width:22%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">66</span></div>
-          <div class="bar"><span class="nm">Lawrence Jacobs</span><span class="track"><span class="fill" style="width:3%"><i class="wc" style="width:88%"></i><i class="nf" style="width:12%"></i></span></span><span class="v">24</span></div>
-          <div class="bar"><span class="nm">Aceba Broadus</span><span class="track"><span class="fill" style="width:1.5%"><i class="wc" style="width:100%"></i></span></span><span class="v">7</span></div>
-          <div class="bar"><span class="nm">Araya Kebede</span><span class="track"><span class="fill" style="width:1%"><i class="wc" style="width:100%"></i></span></span><span class="v">4</span></div>
-          <div class="dc-foot">Totals from current dashboard. Per-person split is illustrative (wire to ClosureType).</div>
+          <div class="bar"><span class="nm">A. Morgan</span><span class="track"><span class="fill" style="width:94%"><i class="wc" style="width:68%"></i><i class="nf" style="width:29%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">759</span></div>
+          <div class="bar"><span class="nm">T. Nguyen</span><span class="track"><span class="fill" style="width:90%"><i class="wc" style="width:57%"></i><i class="nf" style="width:40%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">730</span></div>
+          <div class="bar"><span class="nm">R. Patel</span><span class="track"><span class="fill" style="width:78%"><i class="wc" style="width:71%"></i><i class="nf" style="width:26%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">626</span></div>
+          <div class="bar"><span class="nm">C. Johnson</span><span class="track"><span class="fill" style="width:72%"><i class="wc" style="width:63%"></i><i class="nf" style="width:34%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">579</span></div>
+          <div class="bar"><span class="nm">M. Davis</span><span class="track"><span class="fill" style="width:66%"><i class="wc" style="width:65%"></i><i class="nf" style="width:32%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">531</span></div>
+          <div class="bar"><span class="nm">J. Garcia</span><span class="track"><span class="fill" style="width:63%"><i class="wc" style="width:59%"></i><i class="nf" style="width:38%"></i><i class="ot" style="width:3%"></i></span></span><span class="v">505</span></div>
+          <div class="bar"><span class="nm">K. Bauer</span><span class="track"><span class="fill" style="width:25%"><i class="wc" style="width:84%"></i><i class="nf" style="width:14%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">199</span></div>
+          <div class="bar"><span class="nm">D. Brooks</span><span class="track"><span class="fill" style="width:20%"><i class="wc" style="width:74%"></i><i class="nf" style="width:24%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">161</span></div>
+          <div class="bar"><span class="nm">L. Martin</span><span class="track"><span class="fill" style="width:15%"><i class="wc" style="width:78%"></i><i class="nf" style="width:20%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">123</span></div>
+          <div class="bar"><span class="nm">S. Wilson</span><span class="track"><span class="fill" style="width:9%"><i class="wc" style="width:82%"></i><i class="nf" style="width:16%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">72</span></div>
+          <div class="bar"><span class="nm">P. Adams</span><span class="track"><span class="fill" style="width:8%"><i class="wc" style="width:76%"></i><i class="nf" style="width:22%"></i><i class="ot" style="width:2%"></i></span></span><span class="v">66</span></div>
+          <div class="bar"><span class="nm">B. Clark</span><span class="track"><span class="fill" style="width:3%"><i class="wc" style="width:88%"></i><i class="nf" style="width:12%"></i></span></span><span class="v">24</span></div>
+          <div class="bar"><span class="nm">N. Reyes</span><span class="track"><span class="fill" style="width:1.5%"><i class="wc" style="width:100%"></i></span></span><span class="v">7</span></div>
+          <div class="bar"><span class="nm">E. Turner</span><span class="track"><span class="fill" style="width:1%"><i class="wc" style="width:100%"></i></span></span><span class="v">4</span></div>
+          <div class="dc-foot">Illustrative sample data. Crew identifiers de-identified; in a live deployment this maps to your closure types.</div>
         </div>
         <div class="dash-side">
           <div class="dc-title">How SRs were closed<span>All closures in range</span></div>
@@ -634,7 +653,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
   <div class="wrap">
     <div class="head">
       <div><div class="eyebrow">Case studies</div><h2>Real workflows, really transformed.</h2></div>
-      <p>Drawn from work at a large East Coast metropolitan public works department. Different request types, the same pattern: a manual, paper-and-spreadsheet process turned into a live, transparent field operation.</p>
+      <p>These are the real municipal field-operations problems that shaped Orcserve. Different request types, one repeating pattern, now packaged into the Orcserve platform: a manual, paper-and-spreadsheet process turned into a live, transparent field operation.</p>
     </div>
     <div class="cases">
       <details class="case" open>
@@ -645,7 +664,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
         </summary>
         <div class="case-body">
           <div class="ba"><h4>Before</h4><p>A supervisor printed hundreds of worksheet pages and handed them out by ward. Crews couldn't tell which site to do first, and a text description often didn't match what was on the ground. Completed work was hand-written on the worksheet and re-keyed by the supervisor into the legacy system.</p></div>
-          <div class="ba aft"><h4>After, with Orcserve</h4><p>Each request flows from 311 onto Field Maps with the resident's and the inspector's photos attached, so crews see exactly what to do and where. They work it on a phone, attach their own completion photos, and the status and photos sync straight back to 311, to the resident. Supervisors can see where crews have been on the map.</p></div>
+          <div class="ba aft"><h4>After, the Orcserve pattern</h4><p>Each request flows from 311 onto Field Maps with the resident's and the inspector's photos attached, so crews see exactly what to do and where. They work it on a phone, attach their own completion photos, and the status and photos sync straight back to 311, to the resident. Supervisors can see where crews have been on the map.</p></div>
           <div class="case-tags"><span>photos on the map</span><span>prioritized routes</span><span>crew tracking</span><span>photo back to requester</span></div>
           <div class="out"><b>Outcome:</b> no printing, no re-keying, clear prioritization, visual proof of work, faster closure, and a photo sent back to the person who reported it.</div>
         </div>
@@ -658,7 +677,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
         </summary>
         <div class="case-body">
           <div class="ba"><h4>Before</h4><p>Every week about 500 requests were exported to Excel and emailed to a field vendor working on a separate system. Every day an Excel came back listing what they had done. The round-trip meant errors, missed work, no visibility into the vendor's progress, heavy manual effort, and high cost.</p></div>
-          <div class="ba aft"><h4>After, with Orcserve</h4><p>Requests sync directly to the field app and completed work syncs back automatically, with no spreadsheets. With Esri location sharing, the previously-invisible vendor work becomes visible on the map: where crews went, and which sites were serviced.</p></div>
+          <div class="ba aft"><h4>After, the Orcserve pattern</h4><p>Requests sync directly to the field app and completed work syncs back automatically, with no spreadsheets. With Esri location sharing, the previously-invisible vendor work becomes visible on the map: where crews went, and which sites were serviced.</p></div>
           <div class="case-tags"><span>two-way sync</span><span>no spreadsheets</span><span>vendor transparency</span><span>crew tracking</span></div>
           <div class="out"><b>Outcome:</b> fewer errors, far less manual work, real transparency into field and vendor activity, lower cost, and faster closure.</div>
         </div>
@@ -671,7 +690,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
         </summary>
         <div class="case-body">
           <div class="ba"><h4>Before</h4><p>Missed-collection requests moved through a convoluted, manual, multi-step process spread across systems and paper, with little visibility into status or coverage.</p></div>
-          <div class="ba aft"><h4>After, with Orcserve</h4><p>Requests flow to the field prioritized and mapped, crews work and close them on a phone with photos, and status syncs back to 311 automatically, with crew activity visible on the map.</p></div>
+          <div class="ba aft"><h4>After, the Orcserve pattern</h4><p>Requests flow to the field prioritized and mapped, crews work and close them on a phone with photos, and status syncs back to 311 automatically, with crew activity visible on the map.</p></div>
           <div class="case-tags"><span>streamlined</span><span>mapped &amp; prioritized</span><span>crew tracking</span></div>
           <div class="out"><b>Outcome:</b> a far simpler, faster, and more transparent seasonal operation.</div>
         </div>
@@ -712,9 +731,33 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     <div class="proof">
       <span class="chip"><b>Live in weeks</b>, not years</span>
       <span class="chip"><b>Working today</b>, not a mockup</span>
-      <span class="chip">Proven two-way against <b>ArcGIS Online</b></span>
+      <span class="chip">Live two-way against <b>ArcGIS Online</b></span>
       <span class="chip">Built on <b>public standards</b> (Open311, ArcGIS REST)</span>
       <span class="chip">Customer-hosted by default</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec soft" id="about">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">About</div><h2>Built by people who have run the work, not just mapped it.</h2></div>
+      <p>Orcserve is a product of Amrot, Inc., based in McLean, Virginia, and working with agencies nationwide.</p>
+    </div>
+    <div class="two">
+      <div>
+        <p class="lead">Orcserve grew out of hands-on municipal field-operations work.</p>
+        <p class="muted">The same problems kept showing up: service requests trapped in one system, crews working them on paper or in a separate app, and no clean way to keep the two in sync. Orcserve packages the patterns that solved those problems into a reusable platform, so other agencies don't have to build it from scratch.</p>
+        <p class="muted">We're an early-stage, founder-led company. Engagements are hands-on: we work directly with your team to configure Orcserve to your workflows and stand up a first use case, rather than handing you a login and walking away.</p>
+      </div>
+      <div class="gapright">
+        <div class="princ" style="grid-template-columns:1fr;gap:22px;margin:0">
+          <div class="p"><h3>Focused</h3><p>Municipal public works and field operations, not a general-purpose tool stretched to fit.</p></div>
+          <div class="p"><h3>Independent</h3><p>We connect the systems you already own instead of replacing them, so you keep your systems of record and your data.</p></div>
+          <div class="p"><h3>Hands-on</h3><p>Direct access to the people building the product during pilots and rollout.</p></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -742,25 +785,8 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
       <label><span>Name <span class="req">*</span></span><input id="f-name" name="name" autocomplete="name" required></label>
       <label><span>Email <span class="req">*</span></span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
       <label>Agency / organization<input id="f-co" name="organisation" autocomplete="organization"></label>
-      <label>Your system of record<select id="f-sys" name="system"><option value="">Select…</option><option>311 / CRM</option><option>Cityworks</option><option>Salesforce</option><option>SAP / ERP</option><option>Work-management / CMMS</option><option>Permitting</option><option>Other / not sure</option></select></label>
-      <label>Role<input id="f-role" name="role" autocomplete="organization-title"></label>
-      <label>Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
-      <fieldset class="chk full">
-        <legend>Integration platform you use today <span style="color:var(--muted);font-weight:500">(select any that apply)</span></legend>
-        <div class="cbs">
-          <label class="cb"><input type="checkbox" name="tools" value="Cityworks"><span>Cityworks</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="Rubicon / Routeware"><span>Rubicon / Routeware</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="VertiGIS"><span>VertiGIS</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="Cartegraph"><span>Cartegraph</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="Accela"><span>Accela</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="Salesforce"><span>Salesforce</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="FME (Safe Software)"><span>FME (Safe Software)</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="Custom in-house app"><span>Custom in-house app</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="Other"><span>Other (describe below)</span></label>
-          <label class="cb"><input type="checkbox" name="tools" value="None / not sure"><span>None / not sure</span></label>
-        </div>
-      </fieldset>
-      <label class="full"><span>Tell us more</span><textarea id="f-msg" name="message"></textarea></label>
+      <label class="full">Your system of record<select id="f-sys" name="system"><option value="">Select…</option><option>311 / CRM</option><option>Cityworks</option><option>Salesforce</option><option>SAP / ERP</option><option>Work-management / CMMS</option><option>Permitting</option><option>Other / not sure</option></select></label>
+      <label class="full"><span>What would you like to see? <span style="color:var(--muted);font-weight:500">(your workflow, systems, or questions)</span></span><textarea id="f-msg" name="message"></textarea></label>
       <div class="hp" aria-hidden="true"><label>Leave this empty<input id="f-hp" name="_honey" tabindex="-1" autocomplete="off"></label></div>
       <button class="btn green full" type="submit" id="f-send" style="justify-self:start">Request a demo</button>
       <div class="sent" id="sent" role="status" hidden>Thanks! Your request is in. We'll get back to you within one or two business days.</div>
@@ -778,7 +804,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
         <p>Your systems run the business. ArcGIS runs the field. Orcserve keeps them in sync.</p>
       </div>
       <div class="cols">
-        <div><h4>Product</h4><a href="#how">How it works</a><a href="#work">See it work</a><a href="#uses">Use cases</a><a href="#why">Why Orcserve</a></div>
+        <div><h4>Product</h4><a href="#how">How it works</a><a href="#work">See it work</a><a href="#tech">Technology</a><a href="#uses">Use cases</a><a href="#about">About</a></div>
         <div><h4>Built on</h4><a href="#why">Open311</a><a href="#why">ArcGIS REST</a><a href="#why">Esri Field Maps</a></div>
         <div><h4>Contact</h4><a href="#contact">Request a demo</a></div>
       </div>
@@ -803,8 +829,7 @@ footer{background:var(--navy-3);color:#B9C8DA;padding-block:48px 28px;font-size:
     ['f-name','f-email'].forEach(function(id){document.getElementById(id).setAttribute('data-touched','1')});
     if(!form.checkValidity()){errBox.textContent='Please add your name and a valid email.';errBox.hidden=false;return}
     if(v('f-hp')){okBox.hidden=false;form.reset();return}
-    var tools=[].slice.call(form.querySelectorAll('input[name="tools"]:checked')).map(function(c){return c.value}).join(', ');
-    var data={name:v('f-name'),email:v('f-email'),organisation:v('f-co'),system:v('f-sys'),tools:tools,role:v('f-role'),phone:v('f-phone'),message:v('f-msg'),
+    var data={name:v('f-name'),email:v('f-email'),organisation:v('f-co'),system:v('f-sys'),message:v('f-msg'),
       _subject:'Orcserve demo request: '+v('f-name')+(v('f-co')?' ('+v('f-co')+')':''),_template:'table',_captcha:'false',_replyto:v('f-email')};
     var fd=new FormData();Object.keys(data).forEach(function(k){fd.append(k,data[k])});
     try{fetch('https://formsubmit.co/ajax/'+TO,{method:'POST',body:fd,mode:'no-cors',keepalive:true}).catch(function(){})}catch(err){}
